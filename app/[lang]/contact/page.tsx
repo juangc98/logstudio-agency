@@ -1,5 +1,10 @@
 import { getDict } from "@/lib/i18n";
 
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
+  const { lang } = await params;
+  return { title: `${getDict(lang).nav.contact} · log studio` };
+}
+
 export default async function Contact({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   const { contact } = getDict(lang);
@@ -55,6 +60,13 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
           </div>
           <button className="btn btn-agency w-full">{contact.submit}</button>
         </form>
+
+        <p className="mt-8 text-center text-corteza">
+          {contact.direct}:{" "}
+          <a className="font-bold text-rio underline" href="mailto:contacto@logstudio.com.ar">
+            contacto@logstudio.com.ar
+          </a>
+        </p>
       </div>
     </section>
   );

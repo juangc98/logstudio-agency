@@ -2,6 +2,7 @@ import "../css/style.css";
 
 import type { Metadata } from "next";
 
+import AosInit from "@/components/aos-init";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import { getDict, locales } from "@/lib/i18n";
@@ -41,9 +42,13 @@ export default async function RootLayout({
     <html lang={lang} data-theme="light" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <noscript>
+          <style>{`[data-aos]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
       </head>
       <body className="font-sans antialiased">
         <div className="flex min-h-screen flex-col">
+          <AosInit />
           <Header lang={lang} />
           <main className="grow">{children}</main>
           <Footer lang={lang} />

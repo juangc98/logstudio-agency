@@ -1,144 +1,52 @@
-"use client";
-import Testimonial from "@/components/testimonial";
-import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
-import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
-import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
-import TestimonialImg04 from "@/public/images/testimonial-04.jpg";
-import TestimonialImg05 from "@/public/images/testimonial-05.jpg";
-import TestimonialImg06 from "@/public/images/testimonial-06.jpg";
-import TestimonialImg07 from "@/public/images/testimonial-07.jpg";
-import TestimonialImg08 from "@/public/images/testimonial-08.jpg";
+import { Quote } from "lucide-react";
+import Image from "next/image";
 
-export default function Testimonials() {
-  const testimonials01 = [
-    {
-      image: TestimonialImg01,
-      name: "Lina James",
-      user: "@linaj87",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-    {
-      image: TestimonialImg02,
-      name: "Lina James",
-      user: "@linaj87",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-    {
-      image: TestimonialImg03,
-      name: "Lina James",
-      user: "@linaj87",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-    {
-      image: TestimonialImg04,
-      name: "Mary Kahl",
-      user: "@marykahl",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-  ];
+import Carousel, { CarouselItem } from "@/components/ui/carousel";
+import { Section, SectionHead } from "@/components/ui/section";
+import avatar1 from "@/public/images/testimonial-01.jpg";
+import avatar2 from "@/public/images/testimonial-02.jpg";
+import avatar3 from "@/public/images/testimonial-03.jpg";
+import avatar4 from "@/public/images/testimonial-04.jpg";
+import avatar5 from "@/public/images/testimonial-05.jpg";
 
-  const testimonials02 = [
-    {
-      image: TestimonialImg05,
-      name: "Katy Dragán",
-      user: "@katyd",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-    {
-      image: TestimonialImg06,
-      name: "Karl Ahmed",
-      user: "@karl87",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-    {
-      image: TestimonialImg07,
-      name: "Carlotta Grech",
-      user: "@carlagrech",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-    {
-      image: TestimonialImg08,
-      name: "Alejandra Gok",
-      user: "@alejandraIT",
-      link: "#0",
-      content:
-        "Extremely thoughtful approaches to business. I highly recommend this product to anyone wanting to jump into something new.",
-    },
-  ];
+// TODO(marca): placeholder avatars (template stock photos) and invented quotes.
+const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5];
 
+export default function Testimonials({
+  eyebrow,
+  title,
+  label,
+  items,
+  prev,
+  next,
+}: {
+  eyebrow: string;
+  title: string;
+  label: string;
+  items: { quote: string; name: string; role: string }[];
+  prev: string;
+  next: string;
+}) {
   return (
-    <section className="bg-zinc-800">
-      <div className="py-12 md:py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-            <h2 className="font-inter-tight text-3xl font-bold text-zinc-200 md:text-4xl">
-              Loved by thousands of creatives from around the world
-            </h2>
-          </div>
-        </div>
-        <div className="mx-auto max-w-[94rem] space-y-6">
-          {/* Row #1 */}
-          <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_28%,_black_calc(100%-28%),transparent_100%)]">
-            <div className="animate-infinite-scroll flex items-start justify-center group-hover:[animation-play-state:paused] md:justify-start [&>div]:mx-3">
-              {/* Items */}
-              {testimonials01.map((testimonial, index) => (
-                <Testimonial key={index} testimonial={testimonial}>
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div>
-            {/* Duplicated element for infinite scroll */}
-            <div
-              className="animate-infinite-scroll flex items-start justify-center group-hover:[animation-play-state:paused] md:justify-start [&>div]:mx-3"
-              aria-hidden="true"
-            >
-              {/* Items */}
-              {testimonials01.map((testimonial, index) => (
-                <Testimonial key={index} testimonial={testimonial}>
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div>
-          </div>
-          {/* Row #2 */}
-          <div className="group inline-flex w-full flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_28%,_black_calc(100%-28%),transparent_100%)]">
-            <div className="animate-infinite-scroll-inverse flex items-start justify-center [animation-delay:-7.5s] group-hover:[animation-play-state:paused] md:justify-start [&>div]:mx-3">
-              {/* Items */}
-              {testimonials02.map((testimonial, index) => (
-                <Testimonial key={index} testimonial={testimonial}>
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div>
-            {/* Duplicated element for infinite scroll */}
-            <div
-              className="animate-infinite-scroll-inverse flex items-start justify-center [animation-delay:-7.5s] group-hover:[animation-play-state:paused] md:justify-start [&>div]:mx-3"
-              aria-hidden="true"
-            >
-              {/* Items */}
-              {testimonials02.map((testimonial, index) => (
-                <Testimonial key={index} testimonial={testimonial}>
-                  {testimonial.content}
-                </Testimonial>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Section tone="alta">
+      <SectionHead eyebrow={eyebrow} title={title} />
+      <Carousel label={label} prevLabel={prev} nextLabel={next}>
+        {items.map((t, i) => (
+          <CarouselItem key={t.name}>
+            <figure className="flex h-full flex-col rounded-md border border-borde bg-crema p-6">
+              <Quote className="mb-4 h-6 w-6 text-castor" aria-hidden="true" />
+              <blockquote className="mb-6 grow">{t.quote}</blockquote>
+              <figcaption className="flex items-center gap-3">
+                <Image className="h-10 w-10 rounded-sm object-cover" src={avatars[i % avatars.length]} alt="" width={40} height={40} />
+                <span>
+                  <span className="block font-bold">{t.name}</span>
+                  <span className="block text-sm text-corteza">{t.role}</span>
+                </span>
+              </figcaption>
+            </figure>
+          </CarouselItem>
+        ))}
+      </Carousel>
+    </Section>
   );
 }

@@ -1,32 +1,50 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+
+import AppMock from "@/components/mock";
+import { IconBox, Section, SectionHead } from "@/components/ui/section";
+import { appMeta, appSlugs } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
-// TODO(marca): app icons are pending (the manual leaves them undefined). Placeholder squares for now.
+// Alternating rows: text on one side, app mockup on the other.
 export default function Apps({ lang }: { lang: string }) {
-  const { apps } = getDict(lang);
+  const { home, apps, common } = getDict(lang);
   return (
-    <section id="apps" className="scroll-mt-16 border-t border-borde bg-crema-alta">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-20">
-        <div className="mx-auto max-w-3xl pb-12 text-center">
-          <h2 className="font-display mb-4 text-3xl font-bold md:text-4xl">{apps.title}</h2>
-          <p className="text-lg text-corteza">{apps.subtitle}</p>
-        </div>
-
-        <ul className="grid gap-6 md:grid-cols-3">
-          {apps.items.map((app) => (
-            <li key={app.name} className="flex flex-col rounded-md border border-borde bg-crema p-6">
-              <div
-                aria-hidden="true"
-                className="mb-6 h-16 w-16 rounded-sm border border-dashed border-corteza bg-rio-claro"
-              />
-              <span className="mb-3 inline-flex w-fit rounded-sm bg-panza px-2 py-1 text-xs font-bold text-ink">
-                {apps.soon}
-              </span>
-              <h3 className="font-display mb-2 text-[22px] leading-7 font-bold">{app.name}</h3>
-              <p className="text-corteza">{app.desc}</p>
-            </li>
-          ))}
-        </ul>
+    <Section id="apps" tone="alta">
+      <SectionHead eyebrow={home.apps.eyebrow} title={home.apps.title} desc={home.apps.desc} />
+      <div className="space-y-16 md:space-y-24">
+        {appSlugs.map((slug, i) => {
+          const app = apps.items[slug];
+          const meta = appMeta[slug];
+          return (
+            <div key={slug} className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
+              <div className={i % 2 ? "md:order-2" : ""} data-aos="fade-up">
+                <IconBox icon={meta.icon} tone={meta.tone} size="lg" />
+                <h3 className="font-display mt-6 mb-3 text-3xl font-bold">{app.name}</h3>
+                <p className="mb-6 text-lg text-corteza">{app.tagline}</p>
+                <ul className="mb-8 space-y-2">
+                  {app.features.slice(0, 3).map((f, fi) => {
+                    const Icon = meta.featureIcons[fi];
+                    return (
+                      <li key={f.title} className="flex items-center gap-3">
+                        <Icon className="h-5 w-5 shrink-0 text-rio" aria-hidden="true" />
+                        {f.title}
+                      </li>
+                    );
+                  })}
+                </ul>
+                <Link className="btn btn-apps" href={`/${lang}/apps/${slug}`}>
+                  {common.learnMore}
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+                </Link>
+              </div>
+              <div data-aos={i % 2 ? "fade-right" : "fade-left"}>
+                <AppMock slug={slug} />
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </section>
+    </Section>
   );
 }

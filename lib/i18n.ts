@@ -8,3 +8,7 @@ export type Lang = (typeof locales)[number];
 const dictionaries: Record<Lang, Dict> = { en, es };
 
 export const getDict = (lang: string): Dict => dictionaries[lang as Lang] ?? en;
+
+// generateStaticParams helper for [lang]/.../[slug] routes.
+export const withLocales = <T extends string>(slugs: readonly T[]) =>
+  locales.flatMap((lang) => slugs.map((slug) => ({ lang, slug })));

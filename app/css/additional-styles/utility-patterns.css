@@ -32,7 +32,7 @@
 /* Buttons */
 .btn,
 .btn-sm {
-  @apply inline-flex items-center justify-center rounded-md border border-transparent text-sm font-medium tracking-normal transition;
+  @apply inline-flex items-center justify-center rounded-md border border-transparent text-sm font-medium tracking-normal whitespace-nowrap transition;
 }
 
 .btn {

@@ -1,48 +1,21 @@
 import Counter from "@/components/counter";
+import { Section } from "@/components/ui/section";
 
-interface StatProps {
-  number: number;
-  suffix: string;
-  text: string;
-}
-
-export default function Stats() {
-  const stats: StatProps[] = [
-    {
-      number: 476,
-      suffix: "K",
-      text: "Assets packed with power beyond your imagination.",
-    },
-    {
-      number: 1.44,
-      suffix: "K",
-      text: "Assets packed with power beyond your imagination.",
-    },
-    {
-      number: 1.5,
-      suffix: "M+",
-      text: "Assets packed with power beyond your imagination.",
-    },
-    {
-      number: 192,
-      suffix: "K",
-      text: "Assets packed with power beyond your imagination.",
-    },
-  ];
-
+export default function Stats({ items }: { items: { value: number; suffix: string; label: string }[] }) {
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6">
-      <div className="mx-auto grid max-w-sm items-start gap-12 sm:grid-cols-2 md:-mx-5 md:max-w-none md:grid-cols-4 md:gap-0">
-        {stats.map((stat, index) => (
-          <div key={index} className="relative text-center md:px-5">
-            <h4 className="font-inter-tight mb-2 text-2xl font-bold tabular-nums md:text-3xl">
-              <Counter number={stat.number} />
-              {stat.suffix}
-            </h4>
-            <p className="text-sm text-zinc-500">{stat.text}</p>
+    <Section tone="rio" border={false}>
+      <dl className="grid gap-10 text-center sm:grid-cols-2 md:grid-cols-4">
+        {items.map((s, i) => (
+          <div key={s.label} data-aos="fade-up" data-aos-delay={i * 100}>
+            <dt className="sr-only">{s.label}</dt>
+            <dd className="font-display mb-2 text-4xl font-bold tabular-nums md:text-5xl">
+              <Counter number={s.value} duration={1800} />
+              {s.suffix}
+            </dd>
+            <p className="text-sm">{s.label}</p>
           </div>
         ))}
-      </div>
-    </div>
+      </dl>
+    </Section>
   );
 }

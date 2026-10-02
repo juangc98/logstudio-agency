@@ -1,33 +1,54 @@
-import Image from "next/image";
+import { Cable, Code2, Gauge, Layers, LifeBuoy, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
+import Marquee from "@/components/ui/marquee";
+import { IconBox, Section, SectionHead } from "@/components/ui/section";
+import { clientIcons, clientNames } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
-import castor from "@/public/brand/mascota/castor-construyendo.svg";
 
+export const serviceIcons = [Code2, Layers, Cable, ShoppingBag, Gauge, LifeBuoy];
+
+// Secondary block on the home: the agency side. Apps stay the main story.
 export default function Services({ lang }: { lang: string }) {
-  const { services, doors } = getDict(lang);
+  const { home, doors } = getDict(lang);
+  const { agency } = home;
   return (
-    <section id="services" className="scroll-mt-16 border-t border-borde">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-12 sm:px-6 md:grid-cols-2 md:py-20">
-        <div>
-          <h2 className="font-display mb-4 text-3xl font-bold md:text-4xl">{services.title}</h2>
-          <p className="mb-8 text-lg text-corteza">{services.subtitle}</p>
-          <ul className="mb-8 grid gap-6 sm:grid-cols-2">
-            {services.items.map((s) => (
-              <li key={s.title}>
-                <h3 className="font-display mb-1 text-lg font-bold">{s.title}</h3>
-                <p className="text-corteza">{s.desc}</p>
-              </li>
-            ))}
-          </ul>
-          <Link className="btn btn-agency" href={`/${lang}/contact`}>
-            {doors.store}
-          </Link>
-        </div>
-        <div className="flex justify-center">
-          <Image className="w-full max-w-sm" src={castor} alt={services.imageAlt} />
-        </div>
+    <Section id="services">
+      <SectionHead eyebrow={agency.eyebrow} title={agency.title} desc={agency.desc} />
+      <ul className="mb-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {agency.points.map((p, i) => {
+          const Icon = serviceIcons[i];
+          return (
+            <li key={p} data-aos="fade-up" data-aos-delay={i * 100} className="flex items-center gap-4 rounded-md border border-borde bg-crema-alta p-4">
+              <IconBox icon={Icon} tone={i % 2 ? "brote" : "panza"} />
+              <span className="font-bold">{p}</span>
+            </li>
+          );
+        })}
+      </ul>
+      <div className="mb-12 text-center">
+        <Link className="btn btn-agency mr-3" href={`/${lang}/contact`}>
+          {doors.store}
+        </Link>
+        <Link className="btn btn-outline" href={`/${lang}/services`}>
+          {agency.cta}
+        </Link>
       </div>
-    </section>
+      <p className="mb-6 text-center text-sm text-corteza">{agency.logosTitle}</p>
+      <Marquee label={agency.logosTitle}>
+        {clientNames
+          .slice()
+          .reverse()
+          .map((name, i) => {
+            const Icon = clientIcons[(i + 3) % clientIcons.length];
+            return (
+              <li key={name} className="flex shrink-0 items-center gap-2 text-corteza">
+                <Icon className="h-6 w-6" aria-hidden="true" />
+                <span className="font-display text-lg font-bold whitespace-nowrap">{name}</span>
+              </li>
+            );
+          })}
+      </Marquee>
+    </Section>
   );
 }
