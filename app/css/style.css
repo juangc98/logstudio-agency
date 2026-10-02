@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* Brand: tokens (light + dark) and self-hosted fonts. Source of truth: /assets */
+@import "../../assets/tokens.css";
+@import "../../assets/fonts.css";
+
 /* Additional styles */
 @import "./additional-styles/utility-patterns.css" layer(components);
 @import "./additional-styles/theme.css";
@@ -8,41 +12,41 @@
   strategy: base;
 }
 
-@theme {
-  --font-inter: Inter, sans-serif;
-  --font-inter-tight: Inter Tight, sans-serif;
+/* Theme is driven by data-theme on <html> (set by the toggle), not by the OS. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-  --text-xs: 0.75rem;
-  --text-xs--line-height: 1.5;
-  --text-sm: 0.875rem;
-  --text-sm--line-height: 1.5715;
-  --text-base: 1rem;
-  --text-base--line-height: 1.5;
-  --text-base--letter-spacing: -0.017em;
-  --text-lg: 1.125rem;
-  --text-lg--line-height: 1.5;
-  --text-lg--letter-spacing: -0.017em;
-  --text-xl: 1.25rem;
-  --text-xl--line-height: 1.5;
-  --text-xl--letter-spacing: -0.017em;
-  --text-2xl: 1.5rem;
-  --text-2xl--line-height: 1.415;
-  --text-2xl--letter-spacing: -0.017em;
-  --text-3xl: 2rem;
-  --text-3xl--line-height: 1.3125;
-  --text-3xl--letter-spacing: -0.017em;
-  --text-4xl: 2.5rem;
-  --text-4xl--line-height: 1.25;
-  --text-4xl--letter-spacing: -0.017em;
-  --text-5xl: 3.25rem;
-  --text-5xl--line-height: 1.2;
-  --text-5xl--letter-spacing: -0.017em;
-  --text-6xl: 3.75rem;
-  --text-6xl--line-height: 1.1666;
-  --text-6xl--letter-spacing: -0.017em;
-  --text-7xl: 4.5rem;
-  --text-7xl--line-height: 1.1666;
-  --text-7xl--letter-spacing: -0.017em;
+/* Brand tokens -> Tailwind utilities (bg-crema, text-ink, border-borde...) */
+@theme inline {
+  --color-crema: var(--crema);
+  --color-crema-alta: var(--crema-alta);
+  --color-borde: var(--borde);
+  --color-ink: var(--ink);
+  --color-negro: var(--negro);
+  --color-corteza: var(--corteza);
+  --color-castor: var(--castor);
+  --color-castor-hondo: var(--castor-hondo);
+  --color-panza: var(--panza);
+  --color-tronco: var(--tronco);
+  --color-rio: var(--rio);
+  --color-rio-claro: var(--rio-claro);
+  --color-brote: var(--brote);
+  --color-brote-claro: var(--brote-claro);
+
+  --font-display: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@theme {
+  /* Brand: radii max 4px, no diffuse shadows. */
+  --radius-xs: 2px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-xl: 4px;
+  --radius-2xl: 4px;
+  --shadow-*: initial;
+  --drop-shadow-*: initial;
 
   --animate-infinite-scroll: infinite-scroll 60s linear infinite;
   --animate-infinite-scroll-inverse: infinite-scroll-inverse 60s linear infinite;
@@ -65,20 +69,34 @@
   }
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
   *,
   ::after,
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--borde);
+  }
+
+  body {
+    background-color: var(--crema);
+    color: var(--ink);
+    font-family: var(--font-sans);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--rio);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::after,
+    ::before {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }

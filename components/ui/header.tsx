@@ -1,48 +1,41 @@
-import Image from "next/image";
 import Link from "next/link";
 
-import Logo from "@/public/images/logo.png";
+import { getDict } from "@/lib/i18n";
 
-export default function Header() {
+import HeaderControls from "./header-controls";
+import Logo from "./logo";
+
+export default function Header({ lang }: { lang: string }) {
+  const { nav, doors } = getDict(lang);
+  const links = [
+    { href: `/${lang}#apps`, label: nav.apps },
+    { href: `/${lang}#services`, label: nav.services },
+    { href: `/${lang}/contact`, label: nav.contact },
+  ];
   return (
-    <header className="absolute top-2 z-30 w-full md:top-6">
-      <div className="px-4 sm:px-6">
-        <div className="mx-auto max-w-3xl">
-          <div className="flex h-14 items-center justify-between rounded-lg border border-transparent px-3 [background:linear-gradient(var(--color-white),var(--color-white))_padding-box,linear-gradient(120deg,var(--color-zinc-300),var(--color-zinc-100),var(--color-zinc-300))_border-box]">
-            {/* Site branding */}
-            <div className="mr-4 shrink-0">
-              {/* Logo */}
-              <Link
-                className="flex h-8 w-8 items-center justify-center rounded-sm bg-white shadow-xs shadow-zinc-950/20"
-                href="/"
-              >
-                <Image src={Logo} width={24} height={24} alt="Logo" />
-              </Link>
-            </div>
+    <header className="sticky top-0 z-30 border-b border-borde bg-crema">
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
+        <Link href={`/${lang}`} className="shrink-0">
+          <Logo height={28} />
+        </Link>
 
-            {/* Desktop navigation */}
-            <nav className="flex grow">
-              {/* Desktop sign in links */}
-              <ul className="flex grow flex-wrap items-center justify-end">
-                <li>
-                  <Link
-                    className="flex items-center px-3 py-2 text-sm font-medium text-zinc-500 transition hover:text-zinc-900 lg:px-5"
-                    href="/login"
-                  >
-                    Log in
-                  </Link>
-                </li>
-                <li className="ml-1">
-                  <Link
-                    className="btn-sm w-full bg-zinc-900 text-zinc-100 shadow-sm hover:bg-zinc-800"
-                    href="/request-demo"
-                  >
-                    Request Demo
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <nav aria-label={nav.menu} className="hidden md:block">
+          <ul className="flex items-center gap-6 text-sm font-bold">
+            {links.map((l) => (
+              <li key={l.href}>
+                <Link className="text-ink hover:text-rio" href={l.href}>
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <HeaderControls lang={lang} themeLabel={nav.theme} languageLabel={nav.language} />
+          <Link className="btn btn-agency hidden sm:inline-flex" href={`/${lang}/contact`}>
+            {doors.store}
+          </Link>
         </div>
       </div>
     </header>

@@ -39,6 +39,19 @@
   @apply px-4 py-2;
 }
 
+/* Brand buttons. Text is crema in both themes (crema flips with the theme, so contrast holds). */
+.btn-agency {
+  @apply bg-castor-hondo text-crema hover:opacity-90;
+}
+
+.btn-apps {
+  @apply bg-rio text-crema hover:opacity-90;
+}
+
+.btn-outline {
+  @apply border-ink text-ink hover:bg-crema-alta;
+}
+
 .btn-sm {
   @apply px-2 py-1;
 }
@@ -57,7 +70,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-  @apply border border-zinc-200 shadow-sm shadow-black/5 focus:ring-0 focus:ring-offset-0;
+  @apply border border-corteza focus:ring-0 focus:ring-offset-0;
 }
 
 .form-input,
@@ -72,12 +85,12 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-textarea,
 .form-multiselect,
 .form-select {
-  @apply bg-white px-4 py-2 text-sm text-zinc-600 focus:border-zinc-400;
+  @apply bg-crema-alta px-4 py-2 text-sm text-ink focus:border-rio;
 }
 
 .form-input,
 .form-textarea {
-  @apply placeholder-zinc-400;
+  @apply placeholder-corteza;
 }
 
 .form-select {
@@ -86,7 +99,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .form-checkbox,
 .form-radio {
-  @apply bg-white text-zinc-800 checked:border-transparent checked:bg-zinc-800 focus-visible:not-checked:border-zinc-400;
+  @apply bg-crema-alta text-ink checked:border-transparent checked:bg-ink;
 }
 
 .form-checkbox {
