@@ -47,7 +47,7 @@ export default async function CasePage({ params }: P) {
           {blocks.map(([title, body]) => (
             <div key={title} data-aos="fade-up">
               <h2 className="font-display mb-3 text-2xl font-bold">{title}</h2>
-              <p className="text-lg text-corteza">{body}</p>
+              <p className="text-lg text-tinta-suave">{body}</p>
             </div>
           ))}
         </div>

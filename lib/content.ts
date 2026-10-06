@@ -26,10 +26,10 @@ import {
 export const appSlugs = ["promo-engine", "bundle-builder", "test-lab"] as const;
 export type AppSlug = (typeof appSlugs)[number];
 
-export const appMeta: Record<AppSlug, { icon: LucideIcon; tone: "panza" | "rio" | "brote"; featureIcons: LucideIcon[] }> = {
-  "promo-engine": { icon: Percent, tone: "panza", featureIcons: [CalendarClock, Target, Gift, BarChart3] },
-  "bundle-builder": { icon: Package, tone: "rio", featureIcons: [LayoutGrid, Boxes, Brush, Gauge] },
-  "test-lab": { icon: FlaskConical, tone: "brote", featureIcons: [Shuffle, Zap, BarChart3, ShieldCheck] },
+export const appMeta: Record<AppSlug, { icon: LucideIcon; tone: "brasa" | "rio" | "brote"; featureIcons: LucideIcon[] }> = {
+  "promo-engine": { icon: Percent, tone: "brasa", featureIcons: [CalendarClock, Target, Gift, BarChart3] },
+  "bundle-builder": { icon: Package, tone: "brote", featureIcons: [LayoutGrid, Boxes, Brush, Gauge] },
+  "test-lab": { icon: FlaskConical, tone: "rio", featureIcons: [Shuffle, Zap, BarChart3, ShieldCheck] },
 };
 
 export const caseSlugs = ["case-one", "case-two", "case-three"] as const;

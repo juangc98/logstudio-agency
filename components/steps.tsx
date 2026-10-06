@@ -19,11 +19,11 @@ export default function Steps({
       <ol className={`grid gap-8 ${cols}`}>
         {steps.map((s, i) => (
           <li key={s.title} data-aos="fade-up" data-aos-delay={i * 120}>
-            <span className="font-display mb-4 flex h-12 w-12 items-center justify-center rounded-sm bg-castor-hondo text-xl font-bold text-crema">
+            <span className="font-display mb-4 flex h-12 w-12 items-center justify-center bg-brasa text-xl font-bold text-tinta" style={{ borderRadius: "var(--radius-punta)" }}>
               {i + 1}
             </span>
             <h3 className="font-display mb-2 text-[22px] leading-7 font-bold">{s.title}</h3>
-            <p className="text-corteza">{s.desc}</p>
+            <p className="text-tinta-suave">{s.desc}</p>
           </li>
         ))}
       </ol>

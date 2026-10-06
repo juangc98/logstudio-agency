@@ -23,7 +23,7 @@ export default async function PostPage({ params }: P) {
     <>
       <PageHero title={p.title} back={{ href: `/${lang}/blog`, label: nav.blog }}>
         <Badge>{p.category}</Badge>
-        <span className="self-center text-sm text-corteza">
+        <span className="self-center text-sm text-tinta-suave">
           {p.date} · {p.readTime} {common.minRead}
         </span>
       </PageHero>

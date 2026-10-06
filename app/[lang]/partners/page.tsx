@@ -19,7 +19,7 @@ export default async function Partners({ params }: { params: Promise<{ lang: str
   return (
     <>
       <PageHero title={partners.hero.title} desc={partners.hero.desc}>
-        <Link className="btn btn-agency" href={`/${lang}/contact`}>
+        <Link className="btn btn-primary" href={`/${lang}/contact`}>
           {partners.cta}
         </Link>
       </PageHero>
@@ -28,11 +28,11 @@ export default async function Partners({ params }: { params: Promise<{ lang: str
         <SectionHead title={partners.whyTitle} />
         <ul className="grid gap-6 sm:grid-cols-2">
           {partners.why.map((w, i) => (
-            <li key={w.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="flex gap-4 rounded-md border border-borde bg-crema-alta p-6">
-              <IconBox icon={icons[i]} tone={i % 2 ? "brote" : "panza"} />
+            <li key={w.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="flex gap-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-6">
+              <IconBox icon={icons[i]} tone={i % 2 ? "brote" : "sol"} />
               <div>
                 <h3 className="font-display mb-1 text-[22px] leading-7 font-bold">{w.title}</h3>
-                <p className="text-corteza">{w.desc}</p>
+                <p className="text-tinta-suave">{w.desc}</p>
               </div>
             </li>
           ))}
@@ -43,7 +43,7 @@ export default async function Partners({ params }: { params: Promise<{ lang: str
 
       <Section tone="rio">
         <p className="text-center">
-          <Link className="btn btn-agency" href={`/${lang}/contact`}>
+          <Link className="btn btn-primary" href={`/${lang}/contact`}>
             {partners.cta}
           </Link>
         </p>

@@ -1,11 +1,12 @@
 import type { LucideIcon } from "lucide-react";
 
-type Tone = "base" | "alta" | "rio";
+type Tone = "base" | "alta" | "rio" | "brasa";
 
 const tones: Record<Tone, string> = {
-  base: "bg-crema text-ink",
-  alta: "bg-crema-alta text-ink",
-  rio: "bg-rio-claro text-ink",
+  base: "bg-papel text-tinta",
+  alta: "bg-arena text-tinta",
+  rio: "bg-rio-claro text-tinta",
+  brasa: "bg-brasa-claro text-tinta",
 };
 
 export function Section({
@@ -20,7 +21,7 @@ export function Section({
   children: React.ReactNode;
 }) {
   return (
-    <section id={id} className={`scroll-mt-28 ${tones[tone]} ${border ? "border-t border-borde" : ""}`}>
+    <section id={id} className={`scroll-mt-28 ${tones[tone]} ${border ? "border-t border-linea" : ""}`}>
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-20">{children}</div>
     </section>
   );
@@ -38,22 +39,20 @@ export function SectionHead({
   align?: "center" | "left";
 }) {
   return (
-    <div
-      className={`mb-12 max-w-3xl md:mb-16 ${align === "center" ? "mx-auto text-center" : ""}`}
-      data-aos="fade-up"
-    >
-      {eyebrow && <p className="mb-3 text-sm font-bold tracking-wide text-rio uppercase">{eyebrow}</p>}
-      <h2 className="font-display mb-4 text-3xl leading-tight font-bold md:text-4xl">{title}</h2>
-      {desc && <p className="text-lg text-corteza">{desc}</p>}
+    <div className={`mb-12 max-w-3xl md:mb-16 ${align === "center" ? "mx-auto text-center" : ""}`} data-aos="fade-up">
+      {eyebrow && <p className="etiqueta text-rio mb-3">{eyebrow}</p>}
+      <h2 className="font-display mb-4 text-3xl leading-tight font-bold md:text-[40px] md:leading-[44px]">{title}</h2>
+      {desc && <p className="text-lg leading-[26px] text-tinta-suave">{desc}</p>}
     </div>
   );
 }
 
 const iconTones = {
-  panza: "bg-panza text-ink",
+  sol: "bg-sol text-tinta",
   rio: "bg-rio-claro text-rio",
-  brote: "bg-brote-claro text-brote",
-  castor: "bg-castor-hondo text-crema",
+  brote: "bg-brote-claro text-tinta",
+  brasa: "bg-brasa text-tinta",
+  uva: "bg-uva-claro text-tinta",
 } as const;
 
 export function IconBox({
@@ -67,13 +66,22 @@ export function IconBox({
 }) {
   const box = size === "lg" ? "h-14 w-14" : "h-11 w-11";
   return (
-    <span className={`inline-flex ${box} shrink-0 items-center justify-center rounded-sm ${iconTones[tone]}`} aria-hidden="true">
-      <Icon className={size === "lg" ? "h-7 w-7" : "h-5 w-5"} />
+    <span
+      className={`inline-flex ${box} shrink-0 items-center justify-center ${iconTones[tone]}`}
+      style={{ borderRadius: "var(--radius-punta)" }}
+      aria-hidden="true"
+    >
+      <Icon className={size === "lg" ? "h-7 w-7" : "h-5 w-5"} strokeWidth={2.25} />
     </span>
   );
 }
 
-export function Badge({ children, tone = "panza" }: { children: React.ReactNode; tone?: "panza" | "rio" | "brote" }) {
-  const t = { panza: "bg-panza text-ink", rio: "bg-rio-claro text-ink", brote: "bg-brote-claro text-ink" }[tone];
-  return <span className={`inline-flex w-fit items-center gap-1 rounded-sm px-2 py-1 text-xs font-bold ${t}`}>{children}</span>;
+export function Badge({ children, tone = "sol" }: { children: React.ReactNode; tone?: "sol" | "rio" | "brote" | "brasa" }) {
+  const t = {
+    sol: "bg-sol text-tinta",
+    rio: "bg-rio-claro text-tinta",
+    brote: "bg-brote-claro text-tinta",
+    brasa: "bg-brasa-claro text-tinta",
+  }[tone];
+  return <span className={`etiqueta inline-flex w-fit items-center gap-1 rounded-sm px-2 py-1 ${t}`}>{children}</span>;
 }

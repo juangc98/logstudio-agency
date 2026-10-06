@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
 import Cta from "@/components/cta";
@@ -6,6 +6,7 @@ import Faq from "@/components/faq";
 import AppMock from "@/components/mock";
 import Pricing from "@/components/pricing";
 import Steps from "@/components/steps";
+import Btn from "@/components/ui/btn";
 import { IconBox, Section, SectionHead } from "@/components/ui/section";
 import { appMeta, type AppSlug, appSlugs } from "@/lib/content";
 import { getDict, withLocales } from "@/lib/i18n";
@@ -32,7 +33,7 @@ export default async function AppPage({ params }: P) {
 
   return (
     <>
-      <section className="bg-crema-alta">
+      <section className="bg-arena">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:gap-16 md:py-20">
           <div data-aos="fade-up">
             <Link className="mb-6 inline-block text-sm font-bold text-rio hover:underline" href={`/${lang}/apps`}>
@@ -43,15 +44,15 @@ export default async function AppPage({ params }: P) {
             </div>
             <h1 className="font-display mb-4 text-4xl leading-tight font-bold md:text-5xl">{app.name}</h1>
             <p className="mb-2 text-xl font-bold">{app.tagline}</p>
-            <p className="mb-8 text-lg text-corteza">{app.desc}</p>
+            <p className="mb-8 text-lg text-tinta-suave">{app.desc}</p>
             <div className="flex flex-col gap-4 sm:flex-row">
               {/* TODO(marca): link to the Shopify App Store listing once the app is published */}
-              <Link className="btn btn-apps" href={`/${lang}/contact`}>
+              <Btn href={`/${lang}/contact`} variant="install" icon={ShoppingBag}>
                 {d.common.installApp}
-              </Link>
-              <Link className="btn btn-outline" href={`/${lang}/docs/${slug}`}>
+              </Btn>
+              <Btn href={`/${lang}/docs/${slug}`} variant="secondary">
                 {page.docsCta}
-              </Link>
+              </Btn>
             </div>
           </div>
           <div data-aos="fade-left">
@@ -75,11 +76,11 @@ export default async function AppPage({ params }: P) {
         <SectionHead title={page.featuresTitle} desc={page.featuresDesc} />
         <ul className="grid gap-6 sm:grid-cols-2">
           {app.features.map((f, i) => (
-            <li key={f.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="flex gap-4 rounded-md border border-borde bg-crema-alta p-6">
+            <li key={f.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="flex gap-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-6">
               <IconBox icon={meta.featureIcons[i]} tone={meta.tone} />
               <div>
                 <h3 className="font-display mb-1 text-[22px] leading-7 font-bold">{f.title}</h3>
-                <p className="text-corteza">{f.desc}</p>
+                <p className="text-tinta-suave">{f.desc}</p>
               </div>
             </li>
           ))}
@@ -103,11 +104,11 @@ export default async function AppPage({ params }: P) {
             const o = d.apps.items[s];
             return (
               <li key={s}>
-                <Link href={`/${lang}/apps/${s}`} className="group flex h-full items-start gap-4 rounded-md border border-borde bg-crema p-6 hover:border-ink">
+                <Link href={`/${lang}/apps/${s}`} className="group flex h-full items-start gap-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-6 hover:border-tinta">
                   <IconBox icon={appMeta[s].icon} tone={appMeta[s].tone} />
                   <span>
                     <span className="font-display block text-xl font-bold">{o.name}</span>
-                    <span className="mb-2 block text-corteza">{o.tagline}</span>
+                    <span className="mb-2 block text-tinta-suave">{o.tagline}</span>
                     <span className="flex items-center gap-2 text-sm font-bold text-rio">
                       {d.common.learnMore}
                       <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />

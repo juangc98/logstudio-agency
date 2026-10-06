@@ -39,27 +39,26 @@ export default function Footer({ lang }: { lang: string }) {
     },
   ];
   return (
-    <footer className="border-t border-borde bg-crema-alta">
+    <footer className="border-t-2 border-tinta bg-arena">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
             <Link href={`/${lang}`} className="mb-4 inline-block">
               <Logo height={28} />
             </Link>
-            <p className="mb-4 max-w-xs text-sm text-corteza">{footer.tagline}</p>
-            {/* TODO(marca): official Shopify Partner badge */}
-            <p className="inline-flex items-center gap-2 rounded-sm bg-rio-claro px-3 py-2 text-xs font-bold">
+            <p className="mb-4 max-w-xs text-sm text-tinta-suave">{footer.tagline}</p>
+            <p className="inline-flex items-center gap-2 rounded-sm bg-rio-claro px-3 py-2 text-xs font-semibold">
               <ShoppingBag className="h-4 w-4" aria-hidden="true" />
               {common.partnerBadge}
             </p>
           </div>
           {cols.map((col) => (
             <nav key={col.title} aria-label={col.title}>
-              <h2 className="mb-3 text-sm font-bold">{col.title}</h2>
+              <h2 className="mb-3 text-sm font-semibold">{col.title}</h2>
               <ul className="space-y-2 text-sm">
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link className="text-corteza hover:text-ink" href={l.href}>
+                    <Link className="text-tinta-suave hover:text-tinta" href={l.href}>
                       {l.label}
                     </Link>
                   </li>
@@ -68,9 +67,8 @@ export default function Footer({ lang }: { lang: string }) {
             </nav>
           ))}
         </div>
-        {/* TODO(marca): social links once the accounts exist */}
-        <p className="mt-12 border-t border-borde pt-6 text-sm text-corteza">
-          &copy; {new Date().getFullYear()} log studio. {footer.rights}
+        <p className="mt-12 border-t border-linea pt-6 font-mono text-xs text-tinta-suave">
+          $ exit · session closed. &copy; {new Date().getFullYear()} log studio. {footer.rights}
         </p>
       </div>
     </footer>

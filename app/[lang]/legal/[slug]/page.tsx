@@ -25,7 +25,7 @@ export default async function LegalPage({ params }: P) {
           {doc.sections.map((s) => (
             <section key={s.title} className="mb-8">
               <h2 className="font-display mb-2 text-2xl font-bold">{s.title}</h2>
-              <p className="text-lg text-corteza">{s.body}</p>
+              <p className="text-lg text-tinta-suave">{s.body}</p>
             </section>
           ))}
         </article>

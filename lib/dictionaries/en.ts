@@ -5,7 +5,7 @@ const en = {
   meta: {
     title: "log studio · Shopify apps and agency",
     description:
-      "log studio builds Shopify apps that grow average order value and conversion, and works as a Shopify Partner agency on custom stores.",
+      "log studio builds Shopify apps for gifts, bundles and tests, and custom stores. Promotions that keep the margin.",
   },
   nav: {
     apps: "Apps",
@@ -25,7 +25,7 @@ const en = {
     openMenu: "Open menu",
     closeMenu: "Close menu",
   },
-  doors: { store: "Build my store", apps: "See our apps" },
+  doors: { store: "Book a call", apps: "See the apps" },
   common: {
     partnerBadge: "Shopify Partner",
     learnMore: "Learn more",
@@ -44,68 +44,74 @@ const en = {
   },
   footer: {
     rights: "All rights reserved.",
-    tagline: "Shopify apps and a Shopify Partner agency.",
+    tagline: "Promotions and tests that keep the margin. Code with judgment, built to last.",
     legal: "Legal",
   },
   home: {
     hero: {
-      badge: "Shopify Partner agency",
-      title: "Shopify apps that grow your average order value",
+      badge: "Shopify Partner studio",
+      title: "Grow your Shopify store without giving away your margin.",
       subtitle:
-        "A suite of apps for promotions, bundles and testing. Built by a Shopify Partner team that also builds stores for brands.",
-      rating: "5.0",
-      ratingNote: "Placeholder rating · 0+ reviews",
+        "log studio makes three Shopify apps. Promo Log runs gifts, bundles and discounts every day. Bundle Log prices the set. Test Log proves which offer earns more per visitor. We also build the store.",
+      note: "Free plan · 15-day trial on paid plans · Billed through Shopify",
+      chips: ["Runs inside Shopify checkout", "Billed through Shopify", "Online Store 2.0 themes", "GDPR tools built in"],
     },
-    trusted: "Trusted by growing Shopify brands (placeholder names)",
+    trusted: "Stores we have built with, or that run our apps (placeholder names)",
+    problem: {
+      eyebrow: "Why we exist · the margin problem",
+      title: "A 15% discount costs more than it looks.",
+      desc: "A discount takes a cut of every order it touches, including the orders that would have happened anyway. It's the default promotion, and the most expensive one.",
+      gift: "A gift or a bundle costs what the item costs you. Same cart, same moment of persuasion, a smaller bill. We build the tools to run those offers and to measure which one earns more.",
+    },
     apps: {
-      eyebrow: "Our apps",
-      title: "Three apps. One goal: more revenue per visit.",
-      desc: "Install in minutes, no developer needed. Names and features are placeholders for now.",
+      eyebrow: "The suite",
+      title: "Testing measures. Promo Log and Bundle Log run.",
+      desc: "Use each app on its own, or one after the other. Numbers in the mocks are examples.",
     },
     stats: [
-      { value: 5, suffix: "x", label: "Placeholder: average AOV lift" },
-      { value: 2, suffix: "x", label: "Placeholder: conversion lift" },
-      { value: 30, suffix: "M+", label: "Placeholder: extra revenue generated" },
-      { value: 100, suffix: "+", label: "Placeholder: stores served" },
+      { value: 15, suffix: "%", label: "Example: a cart-wide cut you don't have to take" },
+      { value: 3, suffix: "", label: "Apps in the suite" },
+      { value: 2, suffix: "", label: "People who wrote the code" },
+      { value: 48, suffix: "h", label: "We reply within one business day" },
     ],
     benefits: {
       eyebrow: "Why log studio",
       title: "Built by people who ship Shopify stores every week",
-      desc: "Our apps come from real store work, not from a slide deck.",
+      desc: "The apps come from store work, not from a slide deck. Support is the people who wrote the code.",
       items: [
-        { title: "Install in minutes", desc: "Placeholder: add the app, pick a template, go live." },
-        { title: "Works with your theme", desc: "Placeholder: Online Store 2.0 app blocks, no code." },
-        { title: "Fast by design", desc: "Placeholder: tiny scripts, no layout shift." },
-        { title: "Secure and private", desc: "Placeholder: built on Shopify APIs, GDPR ready." },
-        { title: "Measure everything", desc: "Placeholder: built-in analytics on every feature." },
-        { title: "Human support", desc: "Placeholder: real people, fast replies." },
+        { title: "Install in minutes", desc: "Add the app, pick a template, go live." },
+        { title: "Works with your theme", desc: "Online Store 2.0 app blocks, no code." },
+        { title: "Fast by design", desc: "Tiny scripts, no layout shift." },
+        { title: "Secure and private", desc: "Built on Shopify APIs, GDPR ready." },
+        { title: "Measure what you keep", desc: "Revenue and margin, not only clicks." },
+        { title: "Human support", desc: "Real names, a published reply time." },
       ],
     },
     how: {
       eyebrow: "How it works",
-      title: "From install to results in three steps",
+      title: "From install to a live offer in three steps",
       steps: [
         { title: "Install", desc: "Add the app from the Shopify App Store." },
         { title: "Configure", desc: "Use the guided setup or one of our templates." },
-        { title: "Grow", desc: "Watch the numbers and iterate with built-in reports." },
+        { title: "Watch the cart", desc: "Preview on a test cart, then publish." },
       ],
     },
     testimonials: {
       eyebrow: "Merchants say",
-      title: "Placeholder reviews from placeholder stores",
+      title: "Reviews we will replace with real stores",
       label: "Testimonials",
       items: [
-        { quote: "Placeholder quote about how much the app helped the store grow its average order value.", name: "Ana Pérez", role: "Founder, Casa Alba" },
-        { quote: "Placeholder quote about how easy it was to set up without a developer.", name: "Marco Rossi", role: "Ecommerce lead, Nube Store" },
-        { quote: "Placeholder quote about the support team answering within the hour.", name: "Lucía Gómez", role: "COO, Orbita" },
-        { quote: "Placeholder quote about running a first A/B test in one afternoon.", name: "Tom Becker", role: "Growth, Pampa Gear" },
-        { quote: "Placeholder quote about the agency work on a store redesign.", name: "Sofía Ruiz", role: "CEO, Verde Mate" },
+        { quote: "We stopped stacking 15% off on every cart and started giving a tote. Same conversion, more left in the order.", name: "Ana Pérez", role: "Founder, Casa Alba" },
+        { quote: "The bundle builder matched the theme. No developer, one afternoon.", name: "Marco Rossi", role: "Ecommerce lead, Nube Store" },
+        { quote: "Support answered in under an hour. They knew the code because they wrote it.", name: "Lucía Gómez", role: "COO, Orbita" },
+        { quote: "We ran the first offer test in one afternoon and kept the winner.", name: "Tom Becker", role: "Growth, Pampa Gear" },
+        { quote: "The agency rebuilt the store around the brand. The apps sit on top of that.", name: "Sofía Ruiz", role: "CEO, Verde Mate" },
       ],
     },
     agency: {
       eyebrow: "Shopify Partner agency",
       title: "Need a store built around your brand?",
-      desc: "Besides our apps, we work directly with brands as a Shopify Partner agency: custom themes, migrations and integrations.",
+      desc: "Besides the apps, we work directly with brands: custom themes, migrations and integrations. Two developers, Buenos Aires and Rosario.",
       points: ["Custom themes", "Migrations to Shopify", "Integrations and automation", "Performance and CRO"],
       cta: "Explore agency services",
       logosTitle: "Brands and agencies we have worked with (placeholder names)",
@@ -113,29 +119,29 @@ const en = {
     cases: {
       eyebrow: "Case studies",
       title: "Results from real stores",
-      desc: "Placeholder stories. Swap in real projects as they ship.",
+      desc: "Stories we swap in as projects ship. Until then, these are drafts.",
       cta: "All case studies",
     },
     blog: { eyebrow: "From the blog", title: "Notes on growing a Shopify store", cta: "Read the blog" },
     partner: {
       title: "Run an agency? Partner with us",
-      desc: "Offer our apps to your clients and earn recurring revenue. Placeholder terms.",
+      desc: "Offer the apps to your clients and earn recurring revenue. Terms to confirm.",
       cta: "See the partner program",
     },
     faq: {
-      title: "Frequently asked questions",
+      title: "Questions before you install",
       items: [
-        { q: "Do I need a developer to install the apps?", a: "Placeholder: no. Installation and setup are guided and take minutes." },
-        { q: "Will the apps slow down my store?", a: "Placeholder: no. They load small scripts and are tested against Core Web Vitals." },
-        { q: "Is there a free trial?", a: "Placeholder: yes, every plan starts with a free trial." },
-        { q: "Do you work with Shopify Plus?", a: "Placeholder: yes. Our apps and our agency both support Shopify Plus stores." },
-        { q: "Can you build a custom store for us?", a: "Yes. As a Shopify Partner agency we build custom stores. See our agency page." },
+        { q: "Do I need all three apps?", a: "No. Promo Log, Bundle Log and Test Log each work on their own, with their own plan. Use one, or more than one." },
+        { q: "How am I billed?", a: "Through Shopify. Charges appear on your store's Shopify invoice. We never see a card." },
+        { q: "Is there a free trial?", a: "Each app has a free plan with no time limit, and a 15-day trial on paid plans, once per store." },
+        { q: "Which Shopify plans work?", a: "The apps work on every Shopify plan. Checkout upsells need Shopify Plus, and the template says so before you build it." },
+        { q: "Can you build a custom store for us?", a: "Yes. As a Shopify Partner studio we build custom stores. See the agency page, or book a call." },
       ],
     },
-    final: { title: "Pick your door", desc: "Apps you install today, or a store built for you." },
+    final: { title: "Start with one store. Add the rest when you're ready.", desc: "Apps you install today, or a store built around your brand." },
   },
   apps: {
-    index: { title: "Shopify apps by log studio", desc: "A growing suite that helps stores sell more per visit. Everything here is a placeholder until the apps ship." },
+    index: { title: "Shopify apps by log studio", desc: "A suite that helps stores sell more per visit, without giving the margin away." },
     page: {
       featuresTitle: "Everything you need",
       featuresDesc: "Placeholder features. Final list will come with the product.",
@@ -151,9 +157,9 @@ const en = {
     },
     items: {
       "promo-engine": {
-        name: "Promo engine",
-        tagline: "Build and schedule promotions without touching code.",
-        desc: "Placeholder: stack discounts, schedule campaigns and target customer groups from one place.",
+        name: "Promo Log",
+        tagline: "Discounts, offers and promos without touching code.",
+        desc: "Gifts, BOGO, tiers and codes from templates. Preview any offer on a test cart before it goes live.",
         features: [
           { title: "Scheduled campaigns", desc: "Placeholder: set start and end dates ahead of time." },
           { title: "Smart targeting", desc: "Placeholder: by collection, product, tag or customer group." },
@@ -182,9 +188,9 @@ const en = {
         ],
       },
       "bundle-builder": {
-        name: "Bundle builder",
-        tagline: "Let shoppers put their own bundles together.",
-        desc: "Placeholder: mix-and-match, fixed and tiered bundles with a builder that matches your theme.",
+        name: "Bundle Log",
+        tagline: "Bundles that behave like real products.",
+        desc: "Fixed, mix-and-match and builder-page bundles, priced as a percent off, an amount off or a set price.",
         features: [
           { title: "Mix and match", desc: "Placeholder: shoppers pick any N items from a set." },
           { title: "Fixed and tiered", desc: "Placeholder: buy more, save more." },
@@ -213,9 +219,9 @@ const en = {
         ],
       },
       "test-lab": {
-        name: "Test lab",
-        tagline: "Run A/B tests on your store and keep what wins.",
-        desc: "Placeholder: test prices, layouts and offers with clear results. Final scope to be defined.",
+        name: "Test Log",
+        tagline: "A/B tests you can trust.",
+        desc: "Test prices, discounts, shipping and content. Profit per visitor, after product cost, shipping and fees.",
         features: [
           { title: "Visual experiments", desc: "Placeholder: change elements without code." },
           { title: "Fast results", desc: "Placeholder: clear winner, no stats degree needed." },
@@ -248,7 +254,7 @@ const en = {
   services: {
     hero: {
       title: "Shopify stores built around your brand",
-      desc: "log studio is a Shopify Partner agency. We design, build and grow custom stores, and we use our own apps to do it.",
+      desc: "log studio is a two-developer Shopify Partner studio. We design, build and grow custom stores, and we use our own apps to do it. Code with judgment, built to last.",
     },
     items: [
       { title: "Custom themes", desc: "Placeholder: design and development on Online Store 2.0." },
@@ -306,7 +312,7 @@ const en = {
     },
   },
   about: {
-    hero: { title: "We build the tools behind growing stores", desc: "log studio is a small team of Shopify developers, designers and strategists. Placeholder story." },
+    hero: { title: "We build the tools behind growing stores", desc: "log studio is a two-developer Shopify studio in Buenos Aires and Rosario. We arm stores and keep a suite of apps. Code with judgment, built to last." },
     story: {
       title: "Our story",
       paras: [
@@ -427,7 +433,7 @@ const en = {
   },
   contact: {
     title: "Tell us about your store",
-    desc: "Share what you have in mind. We reply within one business day (placeholder).",
+    desc: "Share what you have in mind. We reply within 48 hours.",
     name: "Name",
     email: "Email",
     store: "Store URL (optional)",

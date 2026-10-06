@@ -21,7 +21,7 @@ export default function Carousel({
     if (el) el.scrollBy({ left: dir * el.clientWidth * 0.8, behavior: "smooth" });
   };
   const btn =
-    "flex h-10 w-10 items-center justify-center rounded-sm border border-ink text-ink hover:bg-crema-alta";
+    "flex h-10 w-10 items-center justify-center rounded-sm border-2 border-tinta text-tinta shadow-hard hover:bg-arena";
   return (
     <div>
       <ul

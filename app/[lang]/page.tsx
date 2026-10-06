@@ -7,8 +7,8 @@ import { CaseCard, PostCard } from "@/components/cards";
 import Cta from "@/components/cta";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
+import Problem from "@/components/problem";
 import Services from "@/components/services";
-import Stats from "@/components/stats";
 import Steps from "@/components/steps";
 import Testimonials from "@/components/testimonials";
 import Trusted from "@/components/trusted";
@@ -25,8 +25,8 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
     <>
       <Hero lang={lang} />
       <Trusted label={home.trusted} />
+      <Problem {...home.problem} />
       <Apps lang={lang} />
-      <Stats items={home.stats} />
       <Benefits {...home.benefits} />
       <Steps eyebrow={home.how.eyebrow} title={home.how.title} steps={home.how.steps} />
       <Testimonials {...home.testimonials} prev={common.prev} next={common.next} />
@@ -42,7 +42,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           ))}
         </Carousel>
         <p className="mt-4 text-center">
-          <Link className="btn btn-outline" href={`/${lang}/case-studies`}>
+          <Link className="btn btn-secondary" href={`/${lang}/case-studies`}>
             {home.cases.cta}
           </Link>
         </p>
@@ -58,7 +58,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
           ))}
         </ul>
         <p className="mt-10 text-center">
-          <Link className="btn btn-outline" href={`/${lang}/blog`}>
+          <Link className="btn btn-secondary" href={`/${lang}/blog`}>
             {home.blog.cta}
           </Link>
         </p>
@@ -66,12 +66,12 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
 
       <Section tone="alta">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center md:flex-row md:text-left" data-aos="fade-up">
-          <IconBox icon={Handshake} tone="castor" size="lg" />
+          <IconBox icon={Handshake} tone="brasa" size="lg" />
           <div className="grow">
             <h2 className="font-display mb-2 text-2xl font-bold">{home.partner.title}</h2>
-            <p className="text-corteza">{home.partner.desc}</p>
+            <p className="text-tinta-suave">{home.partner.desc}</p>
           </div>
-          <Link className="btn btn-agency shrink-0" href={`/${lang}/partners`}>
+          <Link className="btn btn-secondary" href={`/${lang}/partners`}>
             {home.partner.cta}
           </Link>
         </div>

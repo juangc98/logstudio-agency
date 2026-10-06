@@ -19,22 +19,22 @@ export default function Services({ lang }: { lang: string }) {
         {agency.points.map((p, i) => {
           const Icon = serviceIcons[i];
           return (
-            <li key={p} data-aos="fade-up" data-aos-delay={i * 100} className="flex items-center gap-4 rounded-md border border-borde bg-crema-alta p-4">
-              <IconBox icon={Icon} tone={i % 2 ? "brote" : "panza"} />
+            <li key={p} data-aos="fade-up" data-aos-delay={i * 100} className="flex items-center gap-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-4">
+              <IconBox icon={Icon} tone={i % 2 ? "brote" : "sol"} />
               <span className="font-bold">{p}</span>
             </li>
           );
         })}
       </ul>
       <div className="mb-12 text-center">
-        <Link className="btn btn-agency mr-3" href={`/${lang}/contact`}>
+        <Link className="btn btn-primary mr-3" href={`/${lang}/contact`}>
           {doors.store}
         </Link>
-        <Link className="btn btn-outline" href={`/${lang}/services`}>
+        <Link className="btn btn-secondary" href={`/${lang}/services`}>
           {agency.cta}
         </Link>
       </div>
-      <p className="mb-6 text-center text-sm text-corteza">{agency.logosTitle}</p>
+      <p className="mb-6 text-center text-sm text-tinta-suave">{agency.logosTitle}</p>
       <Marquee label={agency.logosTitle}>
         {clientNames
           .slice()
@@ -42,7 +42,7 @@ export default function Services({ lang }: { lang: string }) {
           .map((name, i) => {
             const Icon = clientIcons[(i + 3) % clientIcons.length];
             return (
-              <li key={name} className="flex shrink-0 items-center gap-2 text-corteza">
+              <li key={name} className="flex shrink-0 items-center gap-2 text-tinta-suave">
                 <Icon className="h-6 w-6" aria-hidden="true" />
                 <span className="font-display text-lg font-bold whitespace-nowrap">{name}</span>
               </li>

@@ -13,7 +13,7 @@ export default function PageHero({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="bg-crema-alta">
+    <section className="bg-arena">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-20">
         <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
           {back && (
@@ -22,7 +22,7 @@ export default function PageHero({
             </Link>
           )}
           <h1 className="font-display mb-4 text-4xl leading-tight font-bold md:text-5xl">{title}</h1>
-          {desc && <p className="text-lg text-corteza">{desc}</p>}
+          {desc && <p className="text-lg text-tinta-suave">{desc}</p>}
           {children && <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">{children}</div>}
         </div>
       </div>

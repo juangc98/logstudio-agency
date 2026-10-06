@@ -1,27 +1,27 @@
 /* Typography */
 .h1 {
-  @apply text-5xl font-bold;
+  @apply font-display text-5xl font-extrabold tracking-tight;
 }
 
 .h2 {
-  @apply text-4xl font-bold;
+  @apply font-display text-4xl font-bold tracking-tight;
 }
 
 .h3 {
-  @apply text-3xl font-bold;
+  @apply font-display text-3xl font-bold;
 }
 
 .h4 {
-  @apply text-2xl font-bold;
+  @apply font-display text-2xl font-bold;
 }
 
 @media (width >= theme(--breakpoint-md)) {
   .h1 {
-    @apply text-6xl;
+    @apply text-[64px] leading-[64px];
   }
 
   .h2 {
-    @apply text-5xl;
+    @apply text-[40px] leading-[44px];
   }
 
   .h3 {
@@ -29,31 +29,107 @@
   }
 }
 
-/* Buttons */
+.etiqueta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Buttons: three round corners, 4px tip on the top-right (logo point). */
 .btn,
 .btn-sm {
-  @apply inline-flex items-center justify-center rounded-md border border-transparent text-sm font-medium tracking-normal whitespace-nowrap transition;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--tinta);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0;
+  white-space: nowrap;
+  box-shadow: var(--sombra-dura);
+  transition:
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
 .btn {
-  @apply px-4 py-2;
-}
-
-/* Brand buttons. Text is crema in both themes (crema flips with the theme, so contrast holds). */
-.btn-agency {
-  @apply bg-castor-hondo text-crema hover:opacity-90;
-}
-
-.btn-apps {
-  @apply bg-rio text-crema hover:opacity-90;
-}
-
-.btn-outline {
-  @apply border-ink text-ink hover:bg-crema-alta;
+  height: 48px;
+  gap: 12px;
+  padding: 0 24px;
+  font-size: 16px;
+  border-radius: var(--radius-boton-md);
 }
 
 .btn-sm {
-  @apply px-2 py-1;
+  height: 36px;
+  gap: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  border-radius: var(--radius-boton-sm);
+}
+
+.btn-icon {
+  padding-left: 4px;
+}
+
+.btn .btn-circulo,
+.btn-sm .btn-circulo {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 999px;
+}
+
+.btn .btn-circulo {
+  width: 36px;
+  height: 36px;
+}
+
+.btn-sm .btn-circulo {
+  width: 24px;
+  height: 24px;
+}
+
+.btn:hover,
+.btn-sm:hover {
+  transform: translateY(1px);
+  box-shadow: 0 3px 0 var(--tinta);
+}
+
+.btn:active,
+.btn-sm:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.btn-primary {
+  background: var(--brasa);
+  color: var(--tinta);
+}
+.btn-primary .btn-circulo {
+  background: var(--tinta);
+  color: var(--papel);
+}
+
+.btn-secondary {
+  background: var(--papel);
+  color: var(--tinta);
+}
+.btn-secondary .btn-circulo {
+  background: var(--brasa);
+  color: var(--tinta);
+}
+
+.btn-install {
+  background: var(--brote);
+  color: var(--tinta);
+}
+.btn-install .btn-circulo {
+  background: var(--tinta);
+  color: var(--papel);
 }
 
 /* Forms */
@@ -70,7 +146,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-  @apply border border-corteza focus:ring-0 focus:ring-offset-0;
+  @apply border-2 border-tinta focus:ring-0 focus:ring-offset-0;
 }
 
 .form-input,
@@ -78,19 +154,19 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-multiselect,
 .form-select,
 .form-checkbox {
-  @apply rounded-sm;
+  border-radius: var(--radius-sm);
 }
 
 .form-input,
 .form-textarea,
 .form-multiselect,
 .form-select {
-  @apply bg-crema-alta px-4 py-2 text-sm text-ink focus:border-rio;
+  @apply bg-papel px-4 py-2 text-sm text-tinta focus:border-rio;
 }
 
 .form-input,
 .form-textarea {
-  @apply placeholder-corteza;
+  @apply placeholder-tinta-suave;
 }
 
 .form-select {
@@ -99,21 +175,18 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .form-checkbox,
 .form-radio {
-  @apply bg-crema-alta text-ink checked:border-transparent checked:bg-ink;
+  @apply bg-papel text-tinta checked:border-transparent checked:bg-tinta;
 }
 
 .form-checkbox {
-  @apply rounded-xs;
+  border-radius: 4px;
 }
 
-/* Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
 }

@@ -28,16 +28,16 @@ export default function Pricing({
             key={plan.name}
             data-aos="fade-up"
             data-aos-delay={i * 100}
-            className={`flex flex-col rounded-md border bg-crema p-6 ${i === 1 ? "border-2 border-ink" : "border-borde"}`}
+            className={`flex flex-col rounded-md border-2 bg-papel p-6 shadow-hard ${i === 1 ? "border-tinta" : "border-tinta"}`}
           >
             <div className="mb-4 flex items-center justify-between">
               <h3 className="font-display text-[22px] font-bold">{plan.name}</h3>
               {i === 1 && <Badge>{popular}</Badge>}
             </div>
-            <p className="mb-4 text-corteza">{plan.desc}</p>
+            <p className="mb-4 text-tinta-suave">{plan.desc}</p>
             <p className="mb-6">
               <span className="font-display text-4xl font-bold">{plan.price}</span>
-              <span className="text-corteza"> {plan.period}</span>
+              <span className="text-tinta-suave"> {plan.period}</span>
             </p>
             <ul className="mb-8 grow space-y-3">
               {plan.features.map((f) => (
@@ -47,7 +47,7 @@ export default function Pricing({
                 </li>
               ))}
             </ul>
-            <Link className={`btn w-full ${i === 1 ? "btn-apps" : "btn-outline"}`} href={href}>
+            <Link className={`btn w-full ${i === 1 ? "btn-primary" : "btn-secondary"}`} href={href}>
               {plan.cta}
             </Link>
           </li>

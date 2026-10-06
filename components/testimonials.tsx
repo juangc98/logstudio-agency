@@ -33,14 +33,14 @@ export default function Testimonials({
       <Carousel label={label} prevLabel={prev} nextLabel={next}>
         {items.map((t, i) => (
           <CarouselItem key={t.name}>
-            <figure className="flex h-full flex-col rounded-md border border-borde bg-crema p-6">
-              <Quote className="mb-4 h-6 w-6 text-castor" aria-hidden="true" />
+            <figure className="flex h-full flex-col rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
+              <Quote className="mb-4 h-6 w-6 text-brasa" aria-hidden="true" />
               <blockquote className="mb-6 grow">{t.quote}</blockquote>
               <figcaption className="flex items-center gap-3">
                 <Image className="h-10 w-10 rounded-sm object-cover" src={avatars[i % avatars.length]} alt="" width={40} height={40} />
                 <span>
                   <span className="block font-bold">{t.name}</span>
-                  <span className="block text-sm text-corteza">{t.role}</span>
+                  <span className="block text-sm text-tinta-suave">{t.role}</span>
                 </span>
               </figcaption>
             </figure>

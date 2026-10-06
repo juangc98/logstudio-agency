@@ -1,76 +1,101 @@
-/* log studio · tokens de marca. Generado desde tokens.json: no editar a mano, cambiar el manual y regenerar. */
+/* log studio · tokens de marca v2. Generado desde tokens.json: no editar a mano. */
 :root {
   color-scheme: light dark;
-  --crema: #fdf3df;
-  --crema-alta: #fffaf0;
-  --borde: #e6d3b3;
-  --ink: #4f2424;
-  --negro: #1a1412;
-  --corteza: #6b5448;
-  --castor: #d4552e;
-  --castor-hondo: #b03f22;
-  --panza: #f2b56b;
-  --tronco: #85483b;
-  --rio: #1d6670;
-  --rio-claro: #d6ebe6;
-  --brote: #3a7a2a;
-  --brote-claro: #dcefc9;
+  --papel: #FFF9EE;
+  --arena: #F0DCB3;
+  --tinta: #1A1412;
+  --tinta-suave: #5C4A42;
+  --linea: #E8D6B4;
+  --brasa: #FF6A2B;
+  --sol: #FFC93C;
+  --brote: #19B77A;
+  --rio: #2F5BFF;
+  --uva: #7A4DF0;
+  --brasa-claro: #FFE3D4;
+  --sol-claro: #FFF0C2;
+  --brote-claro: #CFF5E5;
+  --rio-claro: #DCE4FF;
+  --uva-claro: #E7DDFF;
+  --castor: #8B5A3C;
+  --castor-hondo: #5C3A28;
+  --castor-claro: #D9AE7E;
+
+  --display-xl-size: 64px; --display-xl-line: 64px; --display-xl-weight: 800;
+  --display-l-size: 40px; --display-l-line: 44px; --display-l-weight: 700;
+  --titulo-size: 22px; --titulo-line: 28px; --titulo-weight: 600;
+  --cuerpo-size: 16px; --cuerpo-line: 26px; --cuerpo-weight: 400;
+  --chico-size: 14px; --chico-line: 20px; --chico-weight: 400;
+  --etiqueta-size: 12px; --etiqueta-line: 16px; --etiqueta-weight: 700;
+  --codigo-size: 14px; --codigo-line: 20px; --codigo-weight: 400;
+
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --space-1: 4px;
   --space-2: 8px;
+  --space-3: 12px;
   --space-4: 16px;
   --space-6: 24px;
+  --space-8: 32px;
   --space-12: 48px;
+  --space-16: 64px;
 
-  --radius-0: 0px;
-  --radius-sm: 2px;
-  --radius-md: 4px;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --radius-punta: 50% 12px 50% 50%;
+  --radius-boton-sm: 18px 4px 18px 18px;
+  --radius-boton-md: 24px 4px 24px 24px;
+  --radius-boton-lg: 28px 4px 28px 28px;
 
-  --font-display: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-
-  --display-xl-size: 56px; --display-xl-line: 60px; --display-xl-weight: 700;
-  --display-l-size: 36px; --display-l-line: 42px; --display-l-weight: 700;
-  --titulo-size: 22px; --titulo-line: 28px; --titulo-weight: 700;
-  --cuerpo-size: 16px; --cuerpo-line: 24px; --cuerpo-weight: 400;
-  --chico-size: 14px; --chico-line: 20px; --chico-weight: 400;
-  --codigo-size: 14px; --codigo-line: 20px; --codigo-weight: 400;
+  --sombra-dura: 0 4px 0 var(--tinta);
+  --sombra-dura-l: 6px 6px 0 var(--tinta);
+  --borde: 2px solid var(--tinta);
 }
 
-/* Modo oscuro: automático según el sistema, salvo que la página fije data-theme="light". */
+/* Modo oscuro: automático según el sistema, salvo data-theme="light". */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --crema: #241a17;
-    --crema-alta: #30231f;
-    --borde: #4a3730;
-    --ink: #f5e8d3;
-    --negro: #1a1412;
-    --corteza: #b8a493;
-    --castor: #f08a5d;
-    --castor-hondo: #f08a5d;
-    --panza: #f2b56b;
-    --tronco: #c08460;
-    --rio: #6fc3c9;
-    --rio-claro: #1f3a3c;
-    --brote: #9bd67f;
-    --brote-claro: #243a1f;
+    --papel: #15100E;
+    --arena: #221A17;
+    --tinta: #FFF3E0;
+    --tinta-suave: #C2B2A7;
+    --linea: #3A2D28;
+    --brasa: #FF7A3D;
+    --sol: #FFD35C;
+    --brote: #3BD79A;
+    --rio: #7C97FF;
+    --uva: #A98BFF;
+    --brasa-claro: #3A2218;
+    --sol-claro: #3A3014;
+    --brote-claro: #14332A;
+    --rio-claro: #1B2448;
+    --uva-claro: #2B2048;
+    --castor: #B4825F;
+    --castor-hondo: #8B5A3C;
+    --castor-claro: #D9AE7E;
   }
 }
-/* Modo oscuro forzado (selector manual de tema). */
+/* Modo oscuro forzado. */
 :root[data-theme="dark"] {
-  --crema: #241a17;
-  --crema-alta: #30231f;
-  --borde: #4a3730;
-  --ink: #f5e8d3;
-  --negro: #1a1412;
-  --corteza: #b8a493;
-  --castor: #f08a5d;
-  --castor-hondo: #f08a5d;
-  --panza: #f2b56b;
-  --tronco: #c08460;
-  --rio: #6fc3c9;
-  --rio-claro: #1f3a3c;
-  --brote: #9bd67f;
-  --brote-claro: #243a1f;
+  --papel: #15100E;
+  --arena: #221A17;
+  --tinta: #FFF3E0;
+  --tinta-suave: #C2B2A7;
+  --linea: #3A2D28;
+  --brasa: #FF7A3D;
+  --sol: #FFD35C;
+  --brote: #3BD79A;
+  --rio: #7C97FF;
+  --uva: #A98BFF;
+  --brasa-claro: #3A2218;
+  --sol-claro: #3A3014;
+  --brote-claro: #14332A;
+  --rio-claro: #1B2448;
+  --uva-claro: #2B2048;
+  --castor: #B4825F;
+  --castor-hondo: #8B5A3C;
+  --castor-claro: #D9AE7E;
 }

@@ -17,12 +17,12 @@ export default function Faq({
       <SectionHead title={title} />
       <div className="mx-auto max-w-3xl space-y-3" data-aos="fade-up">
         {items.map((item) => (
-          <details key={item.q} className="group rounded-md border border-borde bg-crema-alta open:bg-crema">
+          <details key={item.q} className="group rounded-md border-2 border-tinta bg-arena shadow-hard open:bg-papel">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-4 font-bold">
               {item.q}
               <Plus className="h-5 w-5 shrink-0 transition group-open:rotate-45" aria-hidden="true" />
             </summary>
-            <p className="px-4 pb-4 text-corteza">{item.a}</p>
+            <p className="px-4 pb-4 text-tinta-suave">{item.a}</p>
           </details>
         ))}
       </div>

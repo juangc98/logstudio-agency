@@ -31,7 +31,7 @@ export default function HeaderControls({
         {locales.map((l) => (
           <li key={l}>
             <Link
-              className={`px-2 py-1 uppercase ${l === lang ? "text-ink" : "text-corteza hover:text-ink"}`}
+              className={`px-2 py-1 uppercase ${l === lang ? "text-tinta" : "text-tinta-suave hover:text-tinta"}`}
               href={`/${l}${rest ? `/${rest}` : ""}`}
               hrefLang={l}
               lang={l}
@@ -46,7 +46,7 @@ export default function HeaderControls({
         type="button"
         onClick={toggleTheme}
         aria-label={themeLabel}
-        className="flex h-9 w-9 items-center justify-center rounded-sm border border-ink text-ink hover:bg-crema-alta"
+        className="flex h-9 w-9 items-center justify-center rounded-sm border-2 border-tinta text-tinta hover:bg-arena"
       >
         {/* moon in light theme, sun in dark theme */}
         <svg className="h-5 w-5 fill-current dark:hidden" viewBox="0 0 20 20" aria-hidden="true">

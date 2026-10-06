@@ -6,7 +6,7 @@ const es: Dict = {
   meta: {
     title: "log studio · apps Shopify y agencia",
     description:
-      "log studio crea apps de Shopify que aumentan el ticket promedio y la conversión, y trabaja como agencia Shopify Partner en tiendas a medida.",
+      "log studio arma apps de Shopify para regalos, bundles y tests, y tiendas a medida. Promos que no se comen el margen.",
   },
   nav: {
     apps: "Apps",
@@ -26,7 +26,7 @@ const es: Dict = {
     openMenu: "Abrir menú",
     closeMenu: "Cerrar menú",
   },
-  doors: { store: "Quiero mi tienda", apps: "Ver nuestras apps" },
+  doors: { store: "Agendar una call", apps: "Ver las apps" },
   common: {
     partnerBadge: "Shopify Partner",
     learnMore: "Ver más",
@@ -45,68 +45,74 @@ const es: Dict = {
   },
   footer: {
     rights: "Todos los derechos reservados.",
-    tagline: "Apps de Shopify y agencia Shopify Partner.",
+    tagline: "Promos y tests que cuidan el margen. Código con criterio, construido para durar.",
     legal: "Legales",
   },
   home: {
     hero: {
-      badge: "Agencia Shopify Partner",
-      title: "Apps de Shopify que aumentan tu ticket promedio",
+      badge: "Estudio Shopify Partner",
+      title: "Hacé crecer tu tienda Shopify sin regalar el margen.",
       subtitle:
-        "Una suite de apps para promociones, bundles y tests. Creada por un equipo Shopify Partner que también arma tiendas para marcas.",
-      rating: "5.0",
-      ratingNote: "Puntaje placeholder · 0+ reseñas",
+        "log studio hace tres apps. Promo Log corre regalos, bundles y descuentos todos los días. Bundle Log arma el combo. Test Log prueba cuál gana más por visitante. También armamos la tienda.",
+      note: "Plan Free · 15 días de prueba en planes pagos · Facturado por Shopify",
+      chips: ["Corre en el checkout de Shopify", "Facturado por Shopify", "Temas Online Store 2.0", "Herramientas GDPR incluidas"],
     },
-    trusted: "Marcas de Shopify en crecimiento confían en nosotros (nombres placeholder)",
+    trusted: "Tiendas que armamos, o que usan nuestras apps (nombres placeholder)",
+    problem: {
+      eyebrow: "Por qué existimos · el problema del margen",
+      title: "Un 15% de descuento sale más caro de lo que parece.",
+      desc: "Un descuento se come un pedazo de cada pedido que toca, incluidos los que igual se iban a cerrar. Es la promo por defecto, y la más cara.",
+      gift: "Un regalo o un bundle sale lo que te cuesta el ítem. El mismo carrito, el mismo momento, una cuenta más chica. Armamos las herramientas para correr esas ofertas y medir cuál deja más.",
+    },
     apps: {
-      eyebrow: "Nuestras apps",
-      title: "Tres apps. Un objetivo: más ingresos por visita.",
-      desc: "Se instalan en minutos, sin desarrollador. Nombres y funciones son placeholders por ahora.",
+      eyebrow: "La suite",
+      title: "Test Log mide. Promo Log y Bundle Log corren.",
+      desc: "Usá cada app sola, o una después de la otra. Los números de los mocks son ejemplos.",
     },
     stats: [
-      { value: 5, suffix: "x", label: "Placeholder: aumento promedio del ticket" },
-      { value: 2, suffix: "x", label: "Placeholder: aumento de conversión" },
-      { value: 30, suffix: "M+", label: "Placeholder: ingresos adicionales generados" },
-      { value: 100, suffix: "+", label: "Placeholder: tiendas atendidas" },
+      { value: 15, suffix: "%", label: "Ejemplo: un recorte de carrito que no hace falta" },
+      { value: 3, suffix: "", label: "Apps en la suite" },
+      { value: 2, suffix: "", label: "Personas que escribieron el código" },
+      { value: 48, suffix: "h", label: "Respondemos en un día hábil" },
     ],
     benefits: {
       eyebrow: "Por qué log studio",
       title: "Hechas por gente que entrega tiendas Shopify cada semana",
-      desc: "Nuestras apps nacen del trabajo real en tiendas, no de una presentación.",
+      desc: "Las apps nacen del trabajo en tiendas, no de una presentación. El soporte son las personas que escribieron el código.",
       items: [
-        { title: "Se instalan en minutos", desc: "Placeholder: agregá la app, elegí una plantilla y publicá." },
-        { title: "Funcionan con tu tema", desc: "Placeholder: bloques de Online Store 2.0, sin código." },
-        { title: "Rápidas por diseño", desc: "Placeholder: scripts mínimos, sin saltos de layout." },
-        { title: "Seguras y privadas", desc: "Placeholder: sobre las APIs de Shopify, listas para GDPR." },
-        { title: "Medí todo", desc: "Placeholder: analítica integrada en cada función." },
-        { title: "Soporte humano", desc: "Placeholder: personas reales, respuestas rápidas." },
+        { title: "Se instalan en minutos", desc: "Agregá la app, elegí una plantilla y publicá." },
+        { title: "Funcionan con tu tema", desc: "Bloques de Online Store 2.0, sin código." },
+        { title: "Rápidas por diseño", desc: "Scripts mínimos, sin saltos de layout." },
+        { title: "Seguras y privadas", desc: "Sobre las APIs de Shopify, listas para GDPR." },
+        { title: "Medí lo que te queda", desc: "Ingresos y margen, no solo clics." },
+        { title: "Soporte humano", desc: "Nombres reales, un tiempo de respuesta publicado." },
       ],
     },
     how: {
       eyebrow: "Cómo funciona",
-      title: "De la instalación a los resultados en tres pasos",
+      title: "De la instalación a una oferta en vivo, en tres pasos",
       steps: [
         { title: "Instalá", desc: "Agregá la app desde la Shopify App Store." },
         { title: "Configurá", desc: "Usá la configuración guiada o una de nuestras plantillas." },
-        { title: "Crecé", desc: "Mirá los números e iterá con reportes integrados." },
+        { title: "Mirá el carrito", desc: "Previsualizá en un carrito de prueba y publicá." },
       ],
     },
     testimonials: {
       eyebrow: "Lo que dicen los comerciantes",
-      title: "Reseñas placeholder de tiendas placeholder",
+      title: "Reseñas que vamos a cambiar por tiendas reales",
       label: "Testimonios",
       items: [
-        { quote: "Cita placeholder sobre cuánto ayudó la app a subir el ticket promedio de la tienda.", name: "Ana Pérez", role: "Fundadora, Casa Alba" },
-        { quote: "Cita placeholder sobre lo fácil que fue configurarla sin un desarrollador.", name: "Marco Rossi", role: "Líder de ecommerce, Nube Store" },
-        { quote: "Cita placeholder sobre el equipo de soporte respondiendo en menos de una hora.", name: "Lucía Gómez", role: "COO, Orbita" },
-        { quote: "Cita placeholder sobre correr el primer test A/B en una tarde.", name: "Tom Becker", role: "Growth, Pampa Gear" },
-        { quote: "Cita placeholder sobre el trabajo de agencia en el rediseño de una tienda.", name: "Sofía Ruiz", role: "CEO, Verde Mate" },
+        { quote: "Dejamos de poner 15% en cada carrito y pasamos a un tote de regalo. Misma conversión, más margen en el pedido.", name: "Ana Pérez", role: "Fundadora, Casa Alba" },
+        { quote: "El armador de bundles combinó con el tema. Sin desarrollador, una tarde.", name: "Marco Rossi", role: "Líder de ecommerce, Nube Store" },
+        { quote: "Soporte contestó en menos de una hora. Conocían el código porque lo escribieron.", name: "Lucía Gómez", role: "COO, Orbita" },
+        { quote: "Corrimos el primer test de oferta en una tarde y nos quedamos con el ganador.", name: "Tom Becker", role: "Growth, Pampa Gear" },
+        { quote: "La agencia armó la tienda alrededor de la marca. Las apps van encima de eso.", name: "Sofía Ruiz", role: "CEO, Verde Mate" },
       ],
     },
     agency: {
       eyebrow: "Agencia Shopify Partner",
       title: "¿Necesitás una tienda armada alrededor de tu marca?",
-      desc: "Además de nuestras apps, trabajamos directo con marcas como agencia Shopify Partner: temas a medida, migraciones e integraciones.",
+      desc: "Además de las apps, trabajamos directo con marcas: temas a medida, migraciones e integraciones. Dos programadores, Buenos Aires y Rosario.",
       points: ["Temas a medida", "Migraciones a Shopify", "Integraciones y automatización", "Rendimiento y CRO"],
       cta: "Conocé los servicios de agencia",
       logosTitle: "Marcas y agencias con las que trabajamos (nombres placeholder)",
@@ -114,29 +120,29 @@ const es: Dict = {
     cases: {
       eyebrow: "Casos de éxito",
       title: "Resultados de tiendas reales",
-      desc: "Historias placeholder. Las cambiamos por proyectos reales a medida que salgan.",
+      desc: "Historias que cambiamos por proyectos reales a medida que salgan. Hasta entonces, son borradores.",
       cta: "Todos los casos",
     },
     blog: { eyebrow: "Del blog", title: "Notas para hacer crecer una tienda Shopify", cta: "Leer el blog" },
     partner: {
       title: "¿Tenés una agencia? Sumate como partner",
-      desc: "Ofrecé nuestras apps a tus clientes y generá ingresos recurrentes. Condiciones placeholder.",
+      desc: "Ofrecé las apps a tus clientes y generá ingresos recurrentes. Condiciones a confirmar.",
       cta: "Ver el programa de partners",
     },
     faq: {
-      title: "Preguntas frecuentes",
+      title: "Preguntas antes de instalar",
       items: [
-        { q: "¿Necesito un desarrollador para instalar las apps?", a: "Placeholder: no. La instalación y la configuración son guiadas y llevan minutos." },
-        { q: "¿Las apps hacen más lenta mi tienda?", a: "Placeholder: no. Cargan scripts livianos y se prueban contra Core Web Vitals." },
-        { q: "¿Hay prueba gratuita?", a: "Placeholder: sí, todos los planes arrancan con prueba gratuita." },
-        { q: "¿Trabajan con Shopify Plus?", a: "Placeholder: sí. Tanto las apps como la agencia soportan tiendas Shopify Plus." },
-        { q: "¿Pueden armarnos una tienda a medida?", a: "Sí. Como agencia Shopify Partner armamos tiendas a medida. Mirá la página de agencia." },
+        { q: "¿Necesito las tres apps?", a: "No. Promo Log, Bundle Log y Test Log funcionan cada una por su lado, con su propio plan. Usá una, o más de una." },
+        { q: "¿Cómo me facturan?", a: "Por Shopify. Los cargos aparecen en la factura de tu tienda. Nunca vemos una tarjeta." },
+        { q: "¿Hay prueba gratuita?", a: "Cada app tiene un plan Free sin límite de tiempo, y 15 días de prueba en los planes pagos, una vez por tienda." },
+        { q: "¿Con qué planes de Shopify funciona?", a: "Las apps andan en todos los planes. El upsell de checkout pide Shopify Plus, y la plantilla lo dice antes de armarlo." },
+        { q: "¿Pueden armarnos una tienda a medida?", a: "Sí. Como estudio Shopify Partner armamos tiendas a medida. Mirá la página de agencia, o agendá una call." },
       ],
     },
-    final: { title: "Elegí tu puerta", desc: "Apps que instalás hoy, o una tienda armada para vos." },
+    final: { title: "Empezá con una tienda. Sumá el resto cuando estés listo.", desc: "Apps que instalás hoy, o una tienda armada alrededor de tu marca." },
   },
   apps: {
-    index: { title: "Apps de Shopify de log studio", desc: "Una suite en crecimiento que ayuda a las tiendas a vender más por visita. Todo es placeholder hasta que salgan las apps." },
+    index: { title: "Apps de Shopify de log studio", desc: "Una suite para vender más por visita, sin regalar el margen." },
     page: {
       featuresTitle: "Todo lo que necesitás",
       featuresDesc: "Funciones placeholder. La lista final llega con el producto.",
@@ -152,9 +158,9 @@ const es: Dict = {
     },
     items: {
       "promo-engine": {
-        name: "Promo engine",
-        tagline: "Armá y programá promociones sin tocar código.",
-        desc: "Placeholder: combiná descuentos, programá campañas y apuntá a grupos de clientes desde un solo lugar.",
+        name: "Promo Log",
+        tagline: "Promos que se arman en minutos.",
+        desc: "Regalos, BOGO, niveles y códigos desde plantillas. Previsualizá cualquier oferta en un carrito de prueba antes de publicarla.",
         features: [
           { title: "Campañas programadas", desc: "Placeholder: definí fechas de inicio y fin con anticipación." },
           { title: "Segmentación inteligente", desc: "Placeholder: por colección, producto, etiqueta o grupo de clientes." },
@@ -183,9 +189,9 @@ const es: Dict = {
         ],
       },
       "bundle-builder": {
-        name: "Bundle builder",
-        tagline: "Que tus clientes armen sus propios bundles.",
-        desc: "Placeholder: bundles mix and match, fijos y por niveles, con un armador que combina con tu tema.",
+        name: "Bundle Log",
+        tagline: "Combos que encastran.",
+        desc: "Bundles fijos, mix and match y una página para armar el box, con porcentaje, monto o precio fijo.",
         features: [
           { title: "Mix and match", desc: "Placeholder: el cliente elige N productos de un conjunto." },
           { title: "Fijos y por niveles", desc: "Placeholder: cuanto más comprás, más ahorrás." },
@@ -214,9 +220,9 @@ const es: Dict = {
         ],
       },
       "test-lab": {
-        name: "Test lab",
-        tagline: "Corré tests A/B en tu tienda y quedate con lo que gana.",
-        desc: "Placeholder: probá precios, layouts y ofertas con resultados claros. El alcance final está por definir.",
+        name: "Test Log",
+        tagline: "Dos versiones, una respuesta clara.",
+        desc: "Probá precios, descuentos, envío y contenido. Ganancia por visitante, después del costo, el envío y las comisiones.",
         features: [
           { title: "Experimentos visuales", desc: "Placeholder: cambiá elementos sin código." },
           { title: "Resultados rápidos", desc: "Placeholder: un ganador claro, sin saber de estadística." },
@@ -249,7 +255,7 @@ const es: Dict = {
   services: {
     hero: {
       title: "Tiendas Shopify armadas alrededor de tu marca",
-      desc: "log studio es una agencia Shopify Partner. Diseñamos, armamos y hacemos crecer tiendas a medida, y usamos nuestras propias apps para lograrlo.",
+      desc: "log studio es un estudio Shopify Partner de dos programadores. Diseñamos, armamos y hacemos crecer tiendas a medida, y usamos nuestras propias apps para lograrlo. Código con criterio, construido para durar.",
     },
     items: [
       { title: "Temas a medida", desc: "Placeholder: diseño y desarrollo sobre Online Store 2.0." },
@@ -307,7 +313,7 @@ const es: Dict = {
     },
   },
   about: {
-    hero: { title: "Creamos las herramientas detrás de las tiendas que crecen", desc: "log studio es un equipo chico de desarrolladores, diseñadores y estrategas de Shopify. Historia placeholder." },
+    hero: { title: "Creamos las herramientas detrás de las tiendas que crecen", desc: "log studio es un estudio de dos programadores, de Buenos Aires y Rosario. Armamos tiendas y mantenemos una suite de apps. Código con criterio, construido para durar." },
     story: {
       title: "Nuestra historia",
       paras: [
@@ -428,7 +434,7 @@ const es: Dict = {
   },
   contact: {
     title: "Contanos sobre tu tienda",
-    desc: "Compartí lo que tenés en mente. Respondemos en un día hábil (placeholder).",
+    desc: "Compartí lo que tenés en mente. Te respondemos en menos de 48 horas.",
     name: "Nombre",
     email: "Email",
     store: "URL de la tienda (opcional)",

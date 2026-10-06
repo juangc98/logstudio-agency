@@ -1,22 +1,23 @@
-import Link from "next/link";
+import { Calendar, LayoutGrid } from "lucide-react";
 
+import Btn from "@/components/ui/btn";
 import { Section } from "@/components/ui/section";
 import { getDict } from "@/lib/i18n";
 
 export default function Cta({ lang }: { lang: string }) {
   const { home, doors } = getDict(lang);
   return (
-    <Section tone="rio">
+    <Section tone="brasa">
       <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
-        <h2 className="font-display mb-4 text-3xl font-bold md:text-4xl">{home.final.title}</h2>
-        <p className="mb-8 text-lg">{home.final.desc}</p>
-        <div className="mx-auto flex max-w-xs flex-col gap-4 sm:max-w-none sm:flex-row sm:justify-center">
-          <Link className="btn btn-apps" href={`/${lang}/apps`}>
+        <h2 className="font-display mb-4 text-3xl font-bold md:text-[40px] md:leading-[44px]">{home.final.title}</h2>
+        <p className="mb-8 text-lg leading-[26px]">{home.final.desc}</p>
+        <div className="flex flex-col justify-center gap-3 sm:flex-row">
+          <Btn href={`/${lang}/apps`} variant="secondary" icon={LayoutGrid}>
             {doors.apps}
-          </Link>
-          <Link className="btn btn-agency" href={`/${lang}/contact`}>
+          </Btn>
+          <Btn href={`/${lang}/contact`} variant="primary" icon={Calendar}>
             {doors.store}
-          </Link>
+          </Btn>
         </div>
       </div>
     </Section>

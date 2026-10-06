@@ -14,12 +14,12 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
       <div className="px-4 py-12 sm:px-6 md:py-20">
         <div className="mx-auto max-w-3xl pb-12 text-center">
           <h1 className="font-display mb-4 text-4xl font-bold md:text-5xl">{contact.title}</h1>
-          <p className="text-lg text-corteza">{contact.desc}</p>
+          <p className="text-lg text-tinta-suave">{contact.desc}</p>
         </div>
 
         {/* TODO(marca): mailto until a real form backend exists */}
         <form
-          className="mx-auto max-w-md space-y-4 rounded-md border border-borde bg-crema-alta p-6"
+          className="mx-auto max-w-md space-y-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-6"
           action="mailto:contacto@logstudio.com.ar"
           method="post"
           encType="text/plain"
@@ -58,10 +58,10 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
             </label>
             <textarea id="message" name="message" className="form-textarea w-full" rows={4} required />
           </div>
-          <button className="btn btn-agency w-full">{contact.submit}</button>
+          <button className="btn btn-primary w-full">{contact.submit}</button>
         </form>
 
-        <p className="mt-8 text-center text-corteza">
+        <p className="mt-8 text-center text-tinta-suave">
           {contact.direct}:{" "}
           <a className="font-bold text-rio underline" href="mailto:contacto@logstudio.com.ar">
             contacto@logstudio.com.ar

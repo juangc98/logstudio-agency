@@ -25,14 +25,14 @@ export default async function AppsIndex({ params }: { params: Promise<{ lang: st
             const app = apps.items[slug];
             const meta = appMeta[slug];
             return (
-              <li key={slug} data-aos="fade-up" data-aos-delay={i * 100} className="flex flex-col rounded-md border border-borde bg-crema-alta p-6">
+              <li key={slug} data-aos="fade-up" data-aos-delay={i * 100} className="flex flex-col rounded-md border-2 border-tinta bg-arena shadow-hard p-6">
                 <IconBox icon={meta.icon} tone={meta.tone} size="lg" />
                 <h2 className="font-display mt-5 mb-2 text-2xl font-bold">{app.name}</h2>
-                <p className="mb-6 text-corteza">{app.tagline}</p>
+                <p className="mb-6 text-tinta-suave">{app.tagline}</p>
                 <div className="mb-6 grow">
                   <AppMock slug={slug} />
                 </div>
-                <Link className="btn btn-apps w-full" href={`/${lang}/apps/${slug}`}>
+                <Link className="btn btn-secondary w-full" href={`/${lang}/apps/${slug}`}>
                   {common.learnMore}
                   <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Link>
