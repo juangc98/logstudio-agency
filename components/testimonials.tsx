@@ -28,12 +28,12 @@ export default function Testimonials({
   next: string;
 }) {
   return (
-    <Section tone="alta">
+    <Section tone="sol">
       <SectionHead eyebrow={eyebrow} title={title} />
       <Carousel label={label} prevLabel={prev} nextLabel={next}>
         {items.map((t, i) => (
           <CarouselItem key={t.name}>
-            <figure className="flex h-full flex-col rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
+            <figure className="card-pop flex h-full flex-col rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
               <Quote className="mb-4 h-6 w-6 text-brasa" aria-hidden="true" />
               <blockquote className="mb-6 grow">{t.quote}</blockquote>
               <figcaption className="flex items-center gap-3">

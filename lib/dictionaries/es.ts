@@ -47,6 +47,7 @@ const es: Dict = {
     rights: "Todos los derechos reservados.",
     tagline: "Promos y tests que cuidan el margen. Código con criterio, construido para durar.",
     legal: "Legales",
+    follow: "Seguinos",
   },
   home: {
     hero: {
@@ -128,6 +129,15 @@ const es: Dict = {
       title: "¿Tenés una agencia? Sumate como partner",
       desc: "Ofrecé las apps a tus clientes y generá ingresos recurrentes. Condiciones a confirmar.",
       cta: "Ver el programa de partners",
+    },
+    social: {
+      eyebrow: "Redes",
+      title: "Estamos en Instagram y LinkedIn",
+      desc: "Novedades de las apps, notas de tiendas y algún log del taller. Handles a confirmar.",
+      instagram: "Instagram",
+      linkedin: "LinkedIn",
+      instagramDesc: "Historias, lanzamientos y detrás de escena.",
+      linkedinDesc: "Novedades del estudio y notas para partners.",
     },
     faq: {
       title: "Preguntas antes de instalar",

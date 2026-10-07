@@ -31,7 +31,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
       <Section>
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.items.map((s, i) => (
-            <li key={s.title} data-aos="fade-up" data-aos-delay={(i % 3) * 100} className="rounded-md border-2 border-tinta bg-arena shadow-hard p-6">
+            <li key={s.title} data-aos="fade-up" data-aos-delay={(i % 3) * 100} className="card-pop rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
               <IconBox icon={serviceIcons[i]} tone={i % 2 ? "brote" : "sol"} />
               <h2 className="font-display mt-4 mb-2 text-[22px] leading-7 font-bold">{s.title}</h2>
               <p className="text-tinta-suave">{s.desc}</p>
@@ -46,7 +46,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         <SectionHead title={services.whyTitle} />
         <ul className="mx-auto grid max-w-3xl gap-4 sm:grid-cols-2">
           {services.why.map((w) => (
-            <li key={w} className="flex items-center gap-3 rounded-md border-2 border-tinta bg-arena shadow-hard p-4 font-bold">
+            <li key={w} className="card-pop flex items-center gap-3 rounded-md border-2 border-tinta bg-papel shadow-hard p-4 font-bold">
               <Check className="h-5 w-5 shrink-0 text-brote" aria-hidden="true" />
               {w}
             </li>

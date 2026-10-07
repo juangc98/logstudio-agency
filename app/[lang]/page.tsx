@@ -9,7 +9,8 @@ import Faq from "@/components/faq";
 import Hero from "@/components/hero";
 import Problem from "@/components/problem";
 import Services from "@/components/services";
-import Steps from "@/components/steps";
+import Social from "@/components/social";
+import Stats from "@/components/stats";
 import Testimonials from "@/components/testimonials";
 import Trusted from "@/components/trusted";
 import Carousel, { CarouselItem } from "@/components/ui/carousel";
@@ -28,11 +29,11 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Problem {...home.problem} />
       <Apps lang={lang} />
       <Benefits {...home.benefits} />
-      <Steps eyebrow={home.how.eyebrow} title={home.how.title} steps={home.how.steps} />
+      <Stats items={home.stats} />
       <Testimonials {...home.testimonials} prev={common.prev} next={common.next} />
       <Services lang={lang} />
 
-      <Section tone="alta">
+      <Section tone="brote">
         <SectionHead eyebrow={home.cases.eyebrow} title={home.cases.title} desc={home.cases.desc} />
         <Carousel label={home.cases.title} prevLabel={common.prev} nextLabel={common.next}>
           {caseSlugs.map((slug, i) => (
@@ -77,6 +78,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </Section>
 
+      <Social lang={lang} />
       <Faq title={home.faq.title} items={home.faq.items} />
       <Cta lang={lang} />
     </>

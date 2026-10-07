@@ -11,19 +11,22 @@ type Props = {
   href?: string;
   variant?: keyof typeof variants;
   icon?: LucideIcon;
+  iconSrc?: string;
   size?: "md" | "sm";
   className?: string;
   children: React.ReactNode;
   type?: "button" | "submit";
 };
 
-export default function Btn({ href, variant = "primary", icon: Icon, size = "md", className = "", children, type = "button" }: Props) {
-  const cls = `${size === "sm" ? "btn-sm" : "btn"} ${variants[variant]} ${Icon ? "btn-icon" : ""} ${className}`;
+export default function Btn({ href, variant = "primary", icon: Icon, iconSrc, size = "md", className = "", children, type = "button" }: Props) {
+  const hasIcon = Boolean(Icon || iconSrc);
+  const cls = `${size === "sm" ? "btn-sm" : "btn"} ${variants[variant]} ${hasIcon ? "btn-icon" : ""} ${className}`;
+  const iconClass = size === "sm" ? "h-3.5 w-3.5" : "h-4 w-4";
   const inner = (
     <>
-      {Icon && (
+      {hasIcon && (
         <span className="btn-circulo" aria-hidden="true">
-          <Icon className={size === "sm" ? "h-3.5 w-3.5" : "h-4 w-4"} strokeWidth={2.5} />
+          {iconSrc ? <img src={iconSrc} alt="" className={iconClass} /> : Icon && <Icon className={iconClass} strokeWidth={2.5} />}
         </span>
       )}
       {children}

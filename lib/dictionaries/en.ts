@@ -46,6 +46,7 @@ const en = {
     rights: "All rights reserved.",
     tagline: "Promotions and tests that keep the margin. Code with judgment, built to last.",
     legal: "Legal",
+    follow: "Follow us",
   },
   home: {
     hero: {
@@ -127,6 +128,15 @@ const en = {
       title: "Run an agency? Partner with us",
       desc: "Offer the apps to your clients and earn recurring revenue. Terms to confirm.",
       cta: "See the partner program",
+    },
+    social: {
+      eyebrow: "Social",
+      title: "We're on Instagram and LinkedIn",
+      desc: "App updates, store notes and the odd log from the workshop. Handles to confirm.",
+      instagram: "Instagram",
+      linkedin: "LinkedIn",
+      instagramDesc: "Stories, launches and behind the scenes.",
+      linkedinDesc: "Studio news and partner notes.",
     },
     faq: {
       title: "Questions before you install",

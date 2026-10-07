@@ -1,12 +1,14 @@
 import type { LucideIcon } from "lucide-react";
 
-type Tone = "base" | "alta" | "rio" | "brasa";
+type Tone = "base" | "alta" | "rio" | "brasa" | "sol" | "brote";
 
 const tones: Record<Tone, string> = {
   base: "bg-papel text-tinta",
   alta: "bg-arena text-tinta",
   rio: "bg-rio-claro text-tinta",
   brasa: "bg-brasa-claro text-tinta",
+  sol: "bg-sol-claro text-tinta",
+  brote: "bg-brote-claro text-tinta",
 };
 
 export function Section({

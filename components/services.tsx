@@ -19,7 +19,7 @@ export default function Services({ lang }: { lang: string }) {
         {agency.points.map((p, i) => {
           const Icon = serviceIcons[i];
           return (
-            <li key={p} data-aos="fade-up" data-aos-delay={i * 100} className="flex items-center gap-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-4">
+            <li key={p} data-aos="fade-up" data-aos-delay={i * 100} className="card-pop flex items-center gap-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-4">
               <IconBox icon={Icon} tone={i % 2 ? "brote" : "sol"} />
               <span className="font-bold">{p}</span>
             </li>

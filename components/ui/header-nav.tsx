@@ -36,7 +36,7 @@ export default function HeaderNav({
                   {item.label}
                   <ChevronDown className="h-4 w-4" aria-hidden="true" />
                 </button>
-                <ul className="invisible absolute top-full left-0 z-40 w-72 rounded-md border-2 border-tinta bg-arena shadow-hard p-2 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                <ul className="invisible absolute top-full left-0 z-40 w-72 rounded-md border-2 border-tinta bg-papel shadow-hard p-2 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
                   {item.children.map((c) => (
                     <li key={c.href}>
                       <Link className="block rounded-sm p-3 hover:bg-papel" href={c.href}>

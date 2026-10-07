@@ -19,7 +19,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
 
         {/* TODO(marca): mailto until a real form backend exists */}
         <form
-          className="mx-auto max-w-md space-y-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-6"
+          className="mx-auto max-w-md space-y-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-6"
           action="mailto:contacto@logstudio.com.ar"
           method="post"
           encType="text/plain"

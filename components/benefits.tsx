@@ -25,7 +25,7 @@ export default function Benefits({
             key={item.title}
             data-aos="fade-up"
             data-aos-delay={(i % 3) * 100}
-            className="rounded-md border-2 border-tinta bg-arena shadow-hard p-6"
+            className="card-pop rounded-md border-2 border-tinta bg-papel shadow-hard p-6"
           >
             <IconBox icon={icons[i % icons.length]} tone={tones[i % tones.length]} />
             <h3 className="font-display mt-4 mb-2 text-[22px] leading-7 font-bold">{item.title}</h3>

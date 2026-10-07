@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Brand: tokens (light + dark) and self-hosted fonts. Source of truth: /assets */
+/* Brand: tokens and self-hosted fonts. Source of truth: /assets */
 @import "../../assets/tokens.css";
 @import "../../assets/fonts.css";
 
@@ -11,9 +11,6 @@
 @plugin "@tailwindcss/forms" {
   strategy: base;
 }
-
-/* Theme is driven by data-theme on <html> (set by the toggle), not by the OS. */
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 /* Brand tokens -> Tailwind utilities */
 @theme inline {

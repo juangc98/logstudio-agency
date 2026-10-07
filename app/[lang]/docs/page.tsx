@@ -21,7 +21,7 @@ export default async function DocsIndex({ params }: { params: Promise<{ lang: st
         <ul className="grid gap-6 md:grid-cols-3">
           {appSlugs.map((slug, i) => (
             <li key={slug} data-aos="fade-up" data-aos-delay={i * 100}>
-              <Link href={`/${lang}/docs/${slug}`} className="flex h-full flex-col gap-3 rounded-md border-2 border-tinta bg-arena shadow-hard p-6 hover:border-tinta">
+              <Link href={`/${lang}/docs/${slug}`} className="card-pop flex h-full flex-col gap-3 rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
                 <IconBox icon={appMeta[slug].icon} tone={appMeta[slug].tone} />
                 <h2 className="font-display text-[22px] leading-7 font-bold">{apps.items[slug].name}</h2>
                 <p className="grow text-tinta-suave">{docs.items[slug].intro}</p>

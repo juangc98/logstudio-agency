@@ -3,7 +3,7 @@ import type { AppSlug } from "@/lib/content";
 function Example({ caption, children }: { caption: string; children: React.ReactNode }) {
   return (
     <figure className="text-left">
-      <div className="overflow-hidden border-2 border-tinta bg-papel text-tinta shadow-hard-l" style={{ borderRadius: "var(--radius-lg)" }}>
+      <div className="mock-pop overflow-hidden border-2 border-tinta bg-papel text-tinta shadow-hard-l" style={{ borderRadius: "var(--radius-lg)" }}>
         {children}
       </div>
       <figcaption className="mt-3 text-sm text-tinta-suave">{caption}</figcaption>

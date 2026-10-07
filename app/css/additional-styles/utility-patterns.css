@@ -105,13 +105,14 @@
   box-shadow: none;
 }
 
+/* Two colors only: fill + tinta. Circle is always tinta. */
 .btn-primary {
   background: var(--brasa);
   color: var(--tinta);
 }
 .btn-primary .btn-circulo {
   background: var(--tinta);
-  color: var(--papel);
+  color: var(--brasa);
 }
 
 .btn-secondary {
@@ -119,8 +120,8 @@
   color: var(--tinta);
 }
 .btn-secondary .btn-circulo {
-  background: var(--brasa);
-  color: var(--tinta);
+  background: var(--tinta);
+  color: var(--papel);
 }
 
 .btn-install {
@@ -129,7 +130,26 @@
 }
 .btn-install .btn-circulo {
   background: var(--tinta);
-  color: var(--papel);
+  color: var(--brote);
+}
+
+.card-pop {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.mock-pop {
+  transition: transform 0.35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .card-pop:hover {
+    transform: translateY(-4px);
+    box-shadow: 6px 8px 0 var(--tinta);
+  }
+  .mock-pop:hover {
+    transform: translateY(-8px) rotate(-0.5deg);
+  }
 }
 
 /* Forms */

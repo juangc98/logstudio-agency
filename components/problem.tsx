@@ -13,7 +13,7 @@ export default function Problem({
   gift: string;
 }) {
   return (
-    <Section tone="alta">
+    <Section tone="sol">
       <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
           <p className="etiqueta text-brasa mb-3">{eyebrow}</p>

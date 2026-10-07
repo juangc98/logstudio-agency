@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" width="180" height="180">
+  <rect width="180" height="180" fill="#FFF9EE"/>
+  <g transform="translate(90 90) scale(0.82) translate(-100 -101.75)">
+    <g transform="translate(0 17)">
+      <path fill="#1A1412" fill-rule="evenodd" d="M31.41 106 A70 70 0 0 1 100 50 H156 Q170 50 170 64 V106 ZM39.60 106 A62 62 0 0 1 160.40 106 ZM47.85 106 A54 54 0 0 1 152.15 106 ZM56.18 106 A46 46 0 0 1 143.82 106 ZM64.67 106 A38 38 0 0 1 135.33 106 ZM73.47 106 A30 30 0 0 1 126.53 106 ZM83.03 106 A22 22 0 0 1 116.97 106 Z"/>
+      <path d="M30 117 H170" fill="none" stroke="#1A1412" stroke-width="5" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

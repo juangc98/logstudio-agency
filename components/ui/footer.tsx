@@ -1,7 +1,7 @@
-import { ShoppingBag } from "lucide-react";
 import Link from "next/link";
 
-import { appSlugs, legalSlugs } from "@/lib/content";
+import { InstagramMark, LinkedinMark, ShopifyMark } from "@/components/ui/marks";
+import { appSlugs, legalSlugs, socialLinks } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
 import Logo from "./logo";
@@ -39,7 +39,7 @@ export default function Footer({ lang }: { lang: string }) {
     },
   ];
   return (
-    <footer className="border-t-2 border-tinta bg-arena">
+    <footer className="border-t-2 border-tinta bg-papel">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
@@ -47,10 +47,26 @@ export default function Footer({ lang }: { lang: string }) {
               <Logo height={28} />
             </Link>
             <p className="mb-4 max-w-xs text-sm text-tinta-suave">{footer.tagline}</p>
-            <p className="inline-flex items-center gap-2 rounded-sm bg-rio-claro px-3 py-2 text-xs font-semibold">
-              <ShoppingBag className="h-4 w-4" aria-hidden="true" />
+            <p className="mb-4 inline-flex items-center gap-2 rounded-sm bg-rio-claro px-3 py-2 text-xs font-semibold">
+              <ShopifyMark className="h-4 w-4" />
               {common.partnerBadge}
             </p>
+            <p className="mb-2 text-sm font-semibold">{footer.follow}</p>
+            <ul className="flex items-center gap-3">
+              {socialLinks.map((link) => (
+                <li key={link.id}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="card-pop flex h-10 w-10 items-center justify-center rounded-sm border-2 border-tinta bg-papel shadow-hard"
+                    aria-label={link.id === "instagram" ? "Instagram" : "LinkedIn"}
+                  >
+                    {link.id === "instagram" ? <InstagramMark className="h-5 w-5" /> : <LinkedinMark className="h-5 w-5" />}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
           {cols.map((col) => (
             <nav key={col.title} aria-label={col.title}>

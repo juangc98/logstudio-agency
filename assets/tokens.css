@@ -1,32 +1,46 @@
 /* log studio · tokens de marca v2. Generado desde tokens.json: no editar a mano. */
 :root {
-  color-scheme: light dark;
-  --papel: #FFF9EE;
-  --arena: #F0DCB3;
-  --tinta: #1A1412;
-  --tinta-suave: #5C4A42;
-  --linea: #E8D6B4;
-  --brasa: #FF6A2B;
-  --sol: #FFC93C;
-  --brote: #19B77A;
-  --rio: #2F5BFF;
-  --uva: #7A4DF0;
-  --brasa-claro: #FFE3D4;
-  --sol-claro: #FFF0C2;
-  --brote-claro: #CFF5E5;
-  --rio-claro: #DCE4FF;
-  --uva-claro: #E7DDFF;
-  --castor: #8B5A3C;
-  --castor-hondo: #5C3A28;
-  --castor-claro: #D9AE7E;
+  color-scheme: light;
+  --papel: #fff9ee;
+  --arena: #f0dcb3;
+  --tinta: #1a1412;
+  --tinta-suave: #5c4a42;
+  --linea: #e8d6b4;
+  --brasa: #ff6a2b;
+  --sol: #ffc93c;
+  --brote: #19b77a;
+  --rio: #2f5bff;
+  --uva: #7a4df0;
+  --brasa-claro: #ffe3d4;
+  --sol-claro: #fff0c2;
+  --brote-claro: #cff5e5;
+  --rio-claro: #dce4ff;
+  --uva-claro: #e7ddff;
+  --castor: #8b5a3c;
+  --castor-hondo: #5c3a28;
+  --castor-claro: #d9ae7e;
 
-  --display-xl-size: 64px; --display-xl-line: 64px; --display-xl-weight: 800;
-  --display-l-size: 40px; --display-l-line: 44px; --display-l-weight: 700;
-  --titulo-size: 22px; --titulo-line: 28px; --titulo-weight: 600;
-  --cuerpo-size: 16px; --cuerpo-line: 26px; --cuerpo-weight: 400;
-  --chico-size: 14px; --chico-line: 20px; --chico-weight: 400;
-  --etiqueta-size: 12px; --etiqueta-line: 16px; --etiqueta-weight: 700;
-  --codigo-size: 14px; --codigo-line: 20px; --codigo-weight: 400;
+  --display-xl-size: 64px;
+  --display-xl-line: 64px;
+  --display-xl-weight: 800;
+  --display-l-size: 40px;
+  --display-l-line: 44px;
+  --display-l-weight: 700;
+  --titulo-size: 22px;
+  --titulo-line: 28px;
+  --titulo-weight: 600;
+  --cuerpo-size: 16px;
+  --cuerpo-line: 26px;
+  --cuerpo-weight: 400;
+  --chico-size: 14px;
+  --chico-line: 20px;
+  --chico-weight: 400;
+  --etiqueta-size: 12px;
+  --etiqueta-line: 16px;
+  --etiqueta-weight: 700;
+  --codigo-size: 14px;
+  --codigo-line: 20px;
+  --codigo-weight: 400;
 
   --font-display: "Bricolage Grotesque", system-ui, sans-serif;
   --font-sans: Inter, system-ui, sans-serif;
@@ -53,49 +67,4 @@
   --sombra-dura: 0 4px 0 var(--tinta);
   --sombra-dura-l: 6px 6px 0 var(--tinta);
   --borde: 2px solid var(--tinta);
-}
-
-/* Modo oscuro: automático según el sistema, salvo data-theme="light". */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --papel: #15100E;
-    --arena: #221A17;
-    --tinta: #FFF3E0;
-    --tinta-suave: #C2B2A7;
-    --linea: #3A2D28;
-    --brasa: #FF7A3D;
-    --sol: #FFD35C;
-    --brote: #3BD79A;
-    --rio: #7C97FF;
-    --uva: #A98BFF;
-    --brasa-claro: #3A2218;
-    --sol-claro: #3A3014;
-    --brote-claro: #14332A;
-    --rio-claro: #1B2448;
-    --uva-claro: #2B2048;
-    --castor: #B4825F;
-    --castor-hondo: #8B5A3C;
-    --castor-claro: #D9AE7E;
-  }
-}
-/* Modo oscuro forzado. */
-:root[data-theme="dark"] {
-  --papel: #15100E;
-  --arena: #221A17;
-  --tinta: #FFF3E0;
-  --tinta-suave: #C2B2A7;
-  --linea: #3A2D28;
-  --brasa: #FF7A3D;
-  --sol: #FFD35C;
-  --brote: #3BD79A;
-  --rio: #7C97FF;
-  --uva: #A98BFF;
-  --brasa-claro: #3A2218;
-  --sol-claro: #3A3014;
-  --brote-claro: #14332A;
-  --rio-claro: #1B2448;
-  --uva-claro: #2B2048;
-  --castor: #B4825F;
-  --castor-hondo: #8B5A3C;
-  --castor-claro: #D9AE7E;
 }

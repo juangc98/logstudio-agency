@@ -28,7 +28,7 @@ export default function Pricing({
             key={plan.name}
             data-aos="fade-up"
             data-aos-delay={i * 100}
-            className={`flex flex-col rounded-md border-2 bg-papel p-6 shadow-hard ${i === 1 ? "border-tinta" : "border-tinta"}`}
+            className={`card-pop flex flex-col rounded-md border-2 border-tinta p-6 shadow-hard ${i === 1 ? "bg-sol-claro" : "bg-papel"}`}
           >
             <div className="mb-4 flex items-center justify-between">
               <h3 className="font-display text-[22px] font-bold">{plan.name}</h3>

@@ -1,7 +1,8 @@
-import { ShoppingBag } from "lucide-react";
+import { Calendar, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 
 import Btn from "@/components/ui/btn";
+import { ShopifyMark } from "@/components/ui/marks";
 import { appSlugs } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
@@ -37,9 +38,9 @@ export default function Header({ lang }: { lang: string }) {
   ];
   return (
     <header className="sticky top-0 z-30 border-b-2 border-tinta bg-papel">
-      <div className="bg-arena text-xs font-semibold text-tinta">
+      <div className="bg-rio-claro text-xs font-semibold text-tinta">
         <p className="mx-auto flex h-8 max-w-6xl items-center justify-center gap-2 px-4">
-          <ShoppingBag className="h-4 w-4" aria-hidden="true" />
+          <ShopifyMark className="h-4 w-4" />
           {common.partnerBadge}
         </p>
       </div>
@@ -50,9 +51,12 @@ export default function Header({ lang }: { lang: string }) {
 
         <div className="flex items-center gap-3">
           <HeaderNav items={items} menuLabel={nav.menu} openLabel={nav.openMenu} closeLabel={nav.closeMenu} />
-          <HeaderControls lang={lang} themeLabel={nav.theme} languageLabel={nav.language} />
-          <Btn href={`/${lang}/apps`} variant="secondary" size="sm" className="hidden sm:inline-flex xl:hidden">
+          <HeaderControls lang={lang} languageLabel={nav.language} />
+          <Btn href={`/${lang}/apps`} variant="secondary" size="sm" icon={LayoutGrid} className="hidden lg:inline-flex">
             {doors.apps}
+          </Btn>
+          <Btn href={`/${lang}/contact`} variant="primary" size="sm" icon={Calendar} className="hidden xl:inline-flex">
+            {doors.store}
           </Btn>
         </div>
       </div>

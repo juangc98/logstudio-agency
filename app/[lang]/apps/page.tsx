@@ -25,7 +25,7 @@ export default async function AppsIndex({ params }: { params: Promise<{ lang: st
             const app = apps.items[slug];
             const meta = appMeta[slug];
             return (
-              <li key={slug} data-aos="fade-up" data-aos-delay={i * 100} className="flex flex-col rounded-md border-2 border-tinta bg-arena shadow-hard p-6">
+              <li key={slug} data-aos="fade-up" data-aos-delay={i * 100} className="card-pop flex flex-col rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
                 <IconBox icon={meta.icon} tone={meta.tone} size="lg" />
                 <h2 className="font-display mt-5 mb-2 text-2xl font-bold">{app.name}</h2>
                 <p className="mb-6 text-tinta-suave">{app.tagline}</p>

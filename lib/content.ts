@@ -44,3 +44,8 @@ export type LegalSlug = (typeof legalSlugs)[number];
 // Placeholder brand names for the "trusted by" strip. Invented; replace with real clients.
 export const clientNames = ["Casa Alba", "Nube Store", "Orbita", "Verde Mate", "Pampa Gear", "Lumen", "Tierra Viva", "Kintsu"];
 export const clientIcons: LucideIcon[] = [Store, Rocket, Search, BookOpen, Cable, Zap, Users, ShieldCheck];
+
+export const socialLinks = [
+  { id: "instagram" as const, href: "https://www.instagram.com/logstudio", src: "/svg/insta-icon.svg" },
+  { id: "linkedin" as const, href: "https://www.linkedin.com/company/logstudio", src: "/svg/linkedin-icon.svg" },
+];

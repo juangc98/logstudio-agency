@@ -13,7 +13,7 @@ export default function PageHero({
   children?: React.ReactNode;
 }) {
   return (
-    <section className="bg-arena">
+    <section className="bg-rio-claro">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 md:py-20">
         <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
           {back && (

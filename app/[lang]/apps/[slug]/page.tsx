@@ -1,4 +1,4 @@
-import { ArrowRight, ShoppingBag } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 import Cta from "@/components/cta";
@@ -33,7 +33,7 @@ export default async function AppPage({ params }: P) {
 
   return (
     <>
-      <section className="bg-arena">
+      <section className="bg-rio-claro">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:gap-16 md:py-20">
           <div data-aos="fade-up">
             <Link className="mb-6 inline-block text-sm font-bold text-rio hover:underline" href={`/${lang}/apps`}>
@@ -47,7 +47,7 @@ export default async function AppPage({ params }: P) {
             <p className="mb-8 text-lg text-tinta-suave">{app.desc}</p>
             <div className="flex flex-col gap-4 sm:flex-row">
               {/* TODO(marca): link to the Shopify App Store listing once the app is published */}
-              <Btn href={`/${lang}/contact`} variant="install" icon={ShoppingBag}>
+              <Btn href={`/${lang}/contact`} variant="install" iconSrc="/svg/shopify-icon.svg">
                 {d.common.installApp}
               </Btn>
               <Btn href={`/${lang}/docs/${slug}`} variant="secondary">
@@ -76,7 +76,7 @@ export default async function AppPage({ params }: P) {
         <SectionHead title={page.featuresTitle} desc={page.featuresDesc} />
         <ul className="grid gap-6 sm:grid-cols-2">
           {app.features.map((f, i) => (
-            <li key={f.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="flex gap-4 rounded-md border-2 border-tinta bg-arena shadow-hard p-6">
+            <li key={f.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="card-pop flex gap-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
               <IconBox icon={meta.featureIcons[i]} tone={meta.tone} />
               <div>
                 <h3 className="font-display mb-1 text-[22px] leading-7 font-bold">{f.title}</h3>

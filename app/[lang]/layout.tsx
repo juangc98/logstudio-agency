@@ -19,16 +19,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: meta.description,
     icons: {
       icon: [
-        { url: "/brand/favicon/favicon.svg", type: "image/svg+xml" },
-        { url: "/brand/favicon/favicon-32.png", type: "image/png", sizes: "32x32" },
+        { url: "/brand/favicon/favicon.svg?v=2", type: "image/svg+xml" },
+        { url: "/brand/favicon/favicon-16.png?v=2", type: "image/png", sizes: "16x16" },
+        { url: "/brand/favicon/favicon-32.png?v=2", type: "image/png", sizes: "32x32" },
+        { url: "/brand/favicon/favicon-48.png?v=2", type: "image/png", sizes: "48x48" },
       ],
-      apple: [{ url: "/brand/favicon/apple-touch-icon.png", sizes: "180x180" }],
+      apple: [{ url: "/brand/favicon/apple-touch-icon.png?v=2", sizes: "180x180" }],
     },
   };
 }
-
-// Light by default; the stored choice (set by the header toggle) wins. Runs before paint to avoid a flash.
-const themeScript = `try{document.documentElement.dataset.theme=localStorage.getItem("theme")==="dark"?"dark":"light"}catch(e){}`;
 
 export default async function RootLayout({
   children,
@@ -39,9 +38,8 @@ export default async function RootLayout({
 }) {
   const { lang } = await params;
   return (
-    <html lang={lang} data-theme="light" suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <noscript>
           <style>{`[data-aos]{opacity:1!important;transform:none!important}`}</style>
         </noscript>
