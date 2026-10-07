@@ -3,7 +3,6 @@ import { BarChart3, Gauge, Headphones, LayoutTemplate, Rocket, ShieldCheck } fro
 import { IconBox, Section, SectionHead } from "@/components/ui/section";
 
 const icons = [Rocket, LayoutTemplate, Gauge, ShieldCheck, BarChart3, Headphones];
-const tones = ["rio", "sol", "brote", "rio", "sol", "brote"] as const;
 
 export default function Benefits({
   eyebrow,
@@ -17,7 +16,7 @@ export default function Benefits({
   items: { title: string; desc: string }[];
 }) {
   return (
-    <Section>
+    <Section tone="alta" deco="dots">
       <SectionHead eyebrow={eyebrow} title={title} desc={desc} />
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item, i) => (
@@ -27,7 +26,7 @@ export default function Benefits({
             data-aos-delay={(i % 3) * 100}
             className="card-pop rounded-md border-2 border-tinta bg-papel shadow-hard p-6"
           >
-            <IconBox icon={icons[i % icons.length]} tone={tones[i % tones.length]} />
+            <IconBox icon={icons[i % icons.length]} tone="sol" />
             <h3 className="font-display mt-4 mb-2 text-[22px] leading-7 font-bold">{item.title}</h3>
             <p className="text-tinta-suave">{item.desc}</p>
           </li>

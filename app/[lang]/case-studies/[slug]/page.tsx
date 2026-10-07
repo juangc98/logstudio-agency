@@ -27,11 +27,11 @@ export default async function CasePage({ params }: P) {
   return (
     <>
       <PageHero title={c.title} desc={c.summary} back={{ href: `/${lang}/case-studies`, label: cases.labels.back }}>
-        <Badge tone="rio">{c.client}</Badge>
+        <Badge tone="arena">{c.client}</Badge>
         <Badge>{c.industry}</Badge>
       </PageHero>
 
-      <Section tone="rio" border={false}>
+      <Section tone="tinta" deco="rings-right">
         <dl className="grid gap-8 text-center sm:grid-cols-3">
           {c.metrics.map((m) => (
             <div key={m.label}>

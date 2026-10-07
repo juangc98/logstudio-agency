@@ -28,7 +28,7 @@ export default function Testimonials({
   next: string;
 }) {
   return (
-    <Section tone="sol">
+    <Section tone="base">
       <SectionHead eyebrow={eyebrow} title={title} />
       <Carousel label={label} prevLabel={prev} nextLabel={next}>
         {items.map((t, i) => (

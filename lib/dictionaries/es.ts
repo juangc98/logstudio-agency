@@ -337,13 +337,6 @@ const es: Dict = {
       { title: "Medir lo que importa", desc: "Placeholder: ingresos antes que métricas de vanidad." },
       { title: "Ser fáciles para trabajar", desc: "Placeholder: claros, cercanos y rápidos." },
     ],
-    teamTitle: "El equipo",
-    team: [
-      { name: "Nombre Apellido", role: "Fundador" },
-      { name: "Nombre Apellido", role: "Ingeniería" },
-      { name: "Nombre Apellido", role: "Diseño" },
-      { name: "Nombre Apellido", role: "Alianzas" },
-    ],
     cta: "Trabajá con nosotros",
   },
   partners: {

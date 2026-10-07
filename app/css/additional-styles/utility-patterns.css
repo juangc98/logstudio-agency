@@ -210,3 +210,11 @@ input[type="search"]::-webkit-search-results-decoration {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Dark (tinta) sections: section heads flip to light text; cards keep their own light surface and dark text. */
+.on-dark [data-head] .text-tinta-suave {
+  color: var(--linea);
+}
+.card-pop {
+  color: var(--tinta);
+}

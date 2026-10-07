@@ -38,7 +38,7 @@ export default function Header({ lang }: { lang: string }) {
   ];
   return (
     <header className="sticky top-0 z-30 border-b-2 border-tinta bg-papel">
-      <div className="bg-rio-claro text-xs font-semibold text-tinta">
+      <div className="bg-sol text-xs font-semibold text-tinta">
         <p className="mx-auto flex h-8 max-w-6xl items-center justify-center gap-2 px-4">
           <ShopifyMark className="h-4 w-4" />
           {common.partnerBadge}

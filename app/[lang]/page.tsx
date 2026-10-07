@@ -33,7 +33,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Testimonials {...home.testimonials} prev={common.prev} next={common.next} />
       <Services lang={lang} />
 
-      <Section tone="brote">
+      <Section tone="base" deco="rings-left">
         <SectionHead eyebrow={home.cases.eyebrow} title={home.cases.title} desc={home.cases.desc} />
         <Carousel label={home.cases.title} prevLabel={common.prev} nextLabel={common.next}>
           {caseSlugs.map((slug, i) => (
@@ -49,7 +49,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </p>
       </Section>
 
-      <Section>
+      <Section tone="alta">
         <SectionHead eyebrow={home.blog.eyebrow} title={home.blog.title} />
         <ul className="grid gap-6 md:grid-cols-3">
           {postSlugs.map((slug, i) => (
@@ -65,9 +65,9 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </p>
       </Section>
 
-      <Section tone="alta">
+      <Section tone="base">
         <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 text-center md:flex-row md:text-left" data-aos="fade-up">
-          <IconBox icon={Handshake} tone="brasa" size="lg" />
+          <IconBox icon={Handshake} tone="sol" size="lg" />
           <div className="grow">
             <h2 className="font-display mb-2 text-2xl font-bold">{home.partner.title}</h2>
             <p className="text-tinta-suave">{home.partner.desc}</p>

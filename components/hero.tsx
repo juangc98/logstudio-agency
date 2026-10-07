@@ -11,9 +11,9 @@ export default function Hero({ lang }: { lang: string }) {
   const { hero } = home;
   return (
     <section className="bg-papel">
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-12 sm:px-6 md:grid-cols-2 md:gap-14 md:pt-20 md:pb-20">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pt-12 pb-[calc(3rem+40px)] sm:px-6 md:grid-cols-2 md:gap-14 md:pt-24 md:pb-[calc(7rem+40px)]">
         <div>
-          <Badge tone="rio">
+          <Badge tone="sol">
             <ShopifyMark className="h-3.5 w-3.5" />
             {hero.badge}
           </Badge>
@@ -34,7 +34,7 @@ export default function Hero({ lang }: { lang: string }) {
             {hero.chips.map((chip, i) => (
               <li
                 key={chip}
-                className={`rounded-full border-2 border-tinta px-3 py-1 text-xs font-semibold ${["bg-rio-claro", "bg-sol-claro", "bg-brote-claro", "bg-brasa-claro"][i % 4]}`}
+                className={`rounded-full border-2 border-tinta px-3 py-1 text-xs font-semibold bg-arena`}
               >
                 {chip}
               </li>

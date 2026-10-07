@@ -7,6 +7,7 @@ import AppMock from "@/components/mock";
 import Pricing from "@/components/pricing";
 import Steps from "@/components/steps";
 import Btn from "@/components/ui/btn";
+import Deco from "@/components/ui/deco";
 import { IconBox, Section, SectionHead } from "@/components/ui/section";
 import { appMeta, type AppSlug, appSlugs } from "@/lib/content";
 import { getDict, withLocales } from "@/lib/i18n";
@@ -33,7 +34,8 @@ export default async function AppPage({ params }: P) {
 
   return (
     <>
-      <section className="bg-rio-claro">
+      <section className="relative overflow-hidden bg-arena">
+        <Deco name="pills" />
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:gap-16 md:py-20">
           <div data-aos="fade-up">
             <Link className="mb-6 inline-block text-sm font-bold text-rio hover:underline" href={`/${lang}/apps`}>
@@ -61,7 +63,7 @@ export default async function AppPage({ params }: P) {
         </div>
       </section>
 
-      <Section tone="rio" border={false}>
+      <Section tone="tinta" deco="rings-left">
         <dl className="grid gap-8 text-center sm:grid-cols-3">
           {app.metrics.map((m) => (
             <div key={m.label}>
@@ -97,7 +99,7 @@ export default async function AppPage({ params }: P) {
       />
       <Faq title={page.faqTitle} items={app.faq} />
 
-      <Section tone="alta">
+      <Section tone="base">
         <SectionHead title={page.relatedTitle} />
         <ul className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
           {others.map((s) => {

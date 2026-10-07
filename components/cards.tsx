@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/section";
 import type { CaseSlug, PostSlug } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
-const covers = ["bg-rio-claro", "bg-brote-claro", "bg-sol"];
+const covers = ["bg-arena", "bg-sol", "bg-arena"];
 
 export function CaseCard({ lang, slug, index }: { lang: string; slug: CaseSlug; index: number }) {
   const { cases, common } = getDict(lang);
@@ -18,7 +18,7 @@ export function CaseCard({ lang, slug, index }: { lang: string; slug: CaseSlug; 
         </div>
       </div>
       <div className="flex grow flex-col p-6">
-        <Badge tone="rio">{c.industry}</Badge>
+        <Badge tone="arena">{c.industry}</Badge>
         <h3 className="font-display my-3 text-[22px] leading-7 font-bold">{c.title}</h3>
         <p className="mb-4 grow text-tinta-suave">{c.summary}</p>
         <span className="flex items-center gap-2 text-sm font-bold text-rio">

@@ -39,7 +39,7 @@ export default function Footer({ lang }: { lang: string }) {
     },
   ];
   return (
-    <footer className="border-t-2 border-tinta bg-papel">
+    <footer className="relative -mt-10 rounded-t-[32px] border-t-2 border-tinta bg-papel md:rounded-t-[48px]">
       <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
@@ -47,7 +47,7 @@ export default function Footer({ lang }: { lang: string }) {
               <Logo height={28} />
             </Link>
             <p className="mb-4 max-w-xs text-sm text-tinta-suave">{footer.tagline}</p>
-            <p className="mb-4 inline-flex items-center gap-2 rounded-sm bg-rio-claro px-3 py-2 text-xs font-semibold">
+            <p className="mb-4 inline-flex items-center gap-2 rounded-sm bg-sol px-3 py-2 text-xs font-semibold">
               <ShopifyMark className="h-4 w-4" />
               {common.partnerBadge}
             </p>

@@ -13,10 +13,10 @@ export default function Problem({
   gift: string;
 }) {
   return (
-    <Section tone="sol">
+    <Section tone="alta" deco="dots">
       <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
         <div>
-          <p className="etiqueta text-brasa mb-3">{eyebrow}</p>
+          <p className="etiqueta text-tinta-suave mb-3">{eyebrow}</p>
           <h2 className="font-display mb-4 text-3xl leading-tight font-bold md:text-[40px] md:leading-[44px]">{title}</h2>
           <p className="mb-4 text-lg leading-[26px] text-tinta-suave">{desc}</p>
           <p className="text-lg leading-[26px]">{gift}</p>

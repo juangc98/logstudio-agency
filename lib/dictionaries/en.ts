@@ -336,13 +336,6 @@ const en = {
       { title: "Measure what matters", desc: "Placeholder: revenue over vanity metrics." },
       { title: "Be easy to work with", desc: "Placeholder: clear, close and quick." },
     ],
-    teamTitle: "The team",
-    team: [
-      { name: "Name Surname", role: "Founder" },
-      { name: "Name Surname", role: "Engineering" },
-      { name: "Name Surname", role: "Design" },
-      { name: "Name Surname", role: "Partnerships" },
-    ],
     cta: "Work with us",
   },
   partners: {

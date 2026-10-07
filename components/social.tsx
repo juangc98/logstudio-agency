@@ -6,12 +6,12 @@ import { socialLinks } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
 const marks = { instagram: InstagramMark, linkedin: LinkedinMark };
-const covers = { instagram: "bg-brasa-claro", linkedin: "bg-rio-claro" };
+const covers = { instagram: "bg-arena", linkedin: "bg-arena" };
 
 export default function Social({ lang }: { lang: string }) {
   const { social } = getDict(lang).home;
   return (
-    <Section tone="rio">
+    <Section tone="alta">
       <SectionHead eyebrow={social.eyebrow} title={social.title} desc={social.desc} />
       <ul className="mx-auto grid max-w-3xl gap-6 sm:grid-cols-2">
         {socialLinks.map((link) => {
