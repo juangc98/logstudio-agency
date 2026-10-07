@@ -1,5 +1,6 @@
 import { Plus } from "lucide-react";
 
+import type { DecoName } from "@/components/ui/deco";
 import { Section, SectionHead } from "@/components/ui/section";
 
 // Native <details>: keyboard and screen-reader friendly, no JS.
@@ -7,13 +8,15 @@ export default function Faq({
   title,
   items,
   tone = "base",
+  deco,
 }: {
   title: string;
   items: { q: string; a: string }[];
   tone?: "base" | "alta";
+  deco?: DecoName;
 }) {
   return (
-    <Section tone={tone}>
+    <Section tone={tone} deco={deco}>
       <SectionHead title={title} />
       <div className="mx-auto max-w-3xl space-y-3" data-aos="fade-up">
         {items.map((item) => (

@@ -1,15 +1,16 @@
 import { Handshake } from "lucide-react";
 import Link from "next/link";
 
-import Apps from "@/components/apps";
+import AppExplorer from "@/components/app-explorer";
 import Benefits from "@/components/benefits";
+import Calculator from "@/components/calculator";
 import { CaseCard, PostCard } from "@/components/cards";
 import Cta from "@/components/cta";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
 import Problem from "@/components/problem";
+import Ribbon from "@/components/ribbon";
 import Services from "@/components/services";
-import Social from "@/components/social";
 import Stats from "@/components/stats";
 import Testimonials from "@/components/testimonials";
 import Trusted from "@/components/trusted";
@@ -18,6 +19,7 @@ import { IconBox, Section, SectionHead } from "@/components/ui/section";
 import { caseSlugs, postSlugs } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
+// Section rhythm (tone / background asset): never the same asset in two contiguous sections.
 // Parked for later (apps will have plans and pricing): components/pricing-tabs.tsx, features-0x.tsx.
 export default async function Home({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -27,9 +29,13 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Hero lang={lang} />
       <Trusted label={home.trusted} />
       <Problem {...home.problem} />
-      <Apps lang={lang} />
+      <AppExplorer lang={lang} />
+      <Ribbon words={home.ribbon} />
       <Benefits {...home.benefits} />
       <Stats items={home.stats} />
+      <Section tone="base" deco="plus">
+        <Calculator lang={lang} labels={home.calc} />
+      </Section>
       <Testimonials {...home.testimonials} prev={common.prev} next={common.next} />
       <Services lang={lang} />
 
@@ -49,7 +55,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </p>
       </Section>
 
-      <Section tone="alta">
+      <Section tone="alta" deco="dots">
         <SectionHead eyebrow={home.blog.eyebrow} title={home.blog.title} />
         <ul className="grid gap-6 md:grid-cols-3">
           {postSlugs.map((slug, i) => (
@@ -78,8 +84,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </Section>
 
-      <Social lang={lang} />
-      <Faq title={home.faq.title} items={home.faq.items} />
+      <Faq title={home.faq.title} items={home.faq.items} tone="alta" deco="waves" />
       <Cta lang={lang} />
     </>
   );

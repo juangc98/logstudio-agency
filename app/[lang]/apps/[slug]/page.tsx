@@ -63,7 +63,7 @@ export default async function AppPage({ params }: P) {
         </div>
       </section>
 
-      <Section tone="tinta" deco="rings-left">
+      <Section tone="deep" deco="rings-left">
         <dl className="grid gap-8 text-center sm:grid-cols-3">
           {app.metrics.map((m) => (
             <div key={m.label}>

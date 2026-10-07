@@ -211,9 +211,29 @@ input[type="search"]::-webkit-search-results-decoration {
   scrollbar-width: none;
 }
 
-/* Dark (tinta) sections: section heads flip to light text; cards keep their own light surface and dark text. */
+/* Deep (rio) sections: section heads flip to light text; cards keep their own light surface and dark text. */
 .on-dark [data-head] .text-tinta-suave {
-  color: var(--linea);
+  color: var(--papel);
+}
+
+/* A deep section sits behind its neighbours: the section right before it rounds its bottom corners and covers it. */
+main > section:has(+ section.behind) {
+  position: relative;
+  z-index: 2;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+main > section:has(+ section.behind) > div {
+  padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+  main > section:has(+ section.behind) {
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+  }
+  main > section:has(+ section.behind) > div {
+    padding-bottom: 7rem;
+  }
 }
 .card-pop {
   color: var(--tinta);

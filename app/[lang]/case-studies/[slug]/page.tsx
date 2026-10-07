@@ -31,7 +31,7 @@ export default async function CasePage({ params }: P) {
         <Badge>{c.industry}</Badge>
       </PageHero>
 
-      <Section tone="tinta" deco="rings-right">
+      <Section tone="deep" deco="rings-right">
         <dl className="grid gap-8 text-center sm:grid-cols-3">
           {c.metrics.map((m) => (
             <div key={m.label}>

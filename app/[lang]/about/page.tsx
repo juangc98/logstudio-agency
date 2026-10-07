@@ -30,7 +30,7 @@ export default async function About({ params }: { params: Promise<{ lang: string
         </div>
       </Section>
 
-      <Section tone="alta" deco="rings-right">
+      <Section tone="alta" deco="plus">
         <SectionHead title={about.valuesTitle} />
         <ul className="grid gap-6 md:grid-cols-3">
           {about.values.map((v, i) => (

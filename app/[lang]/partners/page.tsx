@@ -41,7 +41,7 @@ export default async function Partners({ params }: { params: Promise<{ lang: str
 
       <Steps title={partners.stepsTitle} steps={partners.steps} />
 
-      <Section tone="tinta" deco="rings-right">
+      <Section tone="deep" deco="rings-right">
         <p className="text-center">
           <Link className="btn btn-primary" href={`/${lang}/contact`}>
             {partners.cta}

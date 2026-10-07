@@ -54,7 +54,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         </ul>
       </Section>
 
-      <Section tone="tinta" deco="rings-right">
+      <Section tone="deep" deco="rings-right">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="font-display mb-4 text-3xl font-bold md:text-4xl">{services.cta.title}</h2>
           <p className="mb-8 text-lg">{services.cta.desc}</p>

@@ -2,16 +2,17 @@ import type { LucideIcon } from "lucide-react";
 
 import Deco, { type DecoName } from "./deco";
 
-// Surfaces are papel, arena or tinta only. Color lives in accents (brasa buttons, sol badges, app icons).
-type Tone = "base" | "alta" | "tinta";
+// Surfaces are papel, arena or "deep" (rio blue). Color lives in accents (brasa buttons, sol badges, app icons).
+// A deep section sits BEHIND its neighbours: the section before it gets rounded bottom corners (see .behind in
+// utility-patterns.css) and the section after it overlaps it with a rounded top, like layers of paper.
+type Tone = "base" | "alta" | "deep";
 
 const tones: Record<Tone, string> = {
   base: "bg-papel text-tinta",
   alta: "bg-arena text-tinta",
-  tinta: "on-dark bg-tinta text-papel",
+  deep: "behind on-dark z-0 bg-rio text-papel",
 };
 
-// Sections overlap the previous one by 40px with a rounded top edge (divider). Bottom padding adds the 40px back.
 export function Section({
   id,
   tone = "base",
@@ -25,13 +26,22 @@ export function Section({
   border?: boolean;
   children: React.ReactNode;
 }) {
+  const deep = tone === "deep";
   return (
     <section
       id={id}
-      className={`relative -mt-10 scroll-mt-28 overflow-hidden rounded-t-[32px] md:rounded-t-[48px] ${tones[tone]}`}
+      className={`relative -mt-10 scroll-mt-28 overflow-hidden ${deep ? "" : "rounded-t-[32px] md:rounded-t-[48px]"} ${tones[tone]}`}
     >
-      {deco && <Deco name={deco} dark={tone === "tinta"} />}
-      <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-[calc(4rem+40px)] sm:px-6 md:pt-28 md:pb-[calc(7rem+40px)]">{children}</div>
+      {deco && <Deco name={deco} dark={deep} />}
+      <div
+        className={`relative mx-auto max-w-6xl px-4 sm:px-6 ${
+          deep
+            ? "pt-[calc(4rem+40px)] pb-[calc(4rem+40px)] md:pt-[calc(7rem+40px)] md:pb-[calc(7rem+40px)]"
+            : "pt-16 pb-[calc(4rem+40px)] md:pt-28 md:pb-[calc(7rem+40px)]"
+        }`}
+      >
+        {children}
+      </div>
     </section>
   );
 }
