@@ -20,7 +20,7 @@ export default function PageHero({
       <div className="mx-auto max-w-6xl relative px-4 pt-14 pb-[calc(4rem+40px)] sm:px-6 md:pt-24 md:pb-[calc(6rem+40px)]">
         <div className="mx-auto max-w-3xl text-center" data-aos="fade-up">
           {back && (
-            <Link className="mb-6 inline-block text-sm font-bold text-rio hover:underline" href={back.href}>
+            <Link className="mb-6 inline-block text-sm font-bold text-uva hover:underline" href={back.href}>
               ← {back.label}
             </Link>
           )}

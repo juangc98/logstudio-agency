@@ -21,7 +21,7 @@ export function CaseCard({ lang, slug, index }: { lang: string; slug: CaseSlug; 
         <Badge tone="arena">{c.industry}</Badge>
         <h3 className="font-display my-3 text-[22px] leading-7 font-bold">{c.title}</h3>
         <p className="mb-4 grow text-tinta-suave">{c.summary}</p>
-        <span className="flex items-center gap-2 text-sm font-bold text-rio">
+        <span className="flex items-center gap-2 text-sm font-bold text-uva">
           {common.readMore}
           <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
         </span>

@@ -37,7 +37,7 @@ export default function Benefits({
               data-aos="fade-up"
               data-aos-delay={(i % 4) * 100}
               className={`card-pop flex flex-col rounded-md border-2 border-tinta p-6 shadow-hard ${spans[i % spans.length]} ${
-                big ? "justify-between bg-rio text-papel md:p-8" : "bg-papel"
+                big ? "justify-between noche-grid text-papel md:p-8" : "bg-papel"
               }`}
             >
               <IconBox icon={icons[i % icons.length]} tone="sol" size={big ? "lg" : "md"} />

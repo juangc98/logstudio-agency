@@ -27,14 +27,14 @@ export default async function DocPage({ params }: P) {
       <div className="grid gap-10 md:grid-cols-[14rem_1fr]">
         <aside>
           <nav aria-label={d.common.onThisPage} className="md:sticky md:top-32">
-            <Link className="mb-4 block text-sm font-bold text-rio hover:underline" href={`/${lang}/docs`}>
+            <Link className="mb-4 block text-sm font-bold text-uva hover:underline" href={`/${lang}/docs`}>
               ← {d.nav.docs}
             </Link>
             <p className="mb-2 text-xs font-bold tracking-wide text-tinta-suave uppercase">{d.common.onThisPage}</p>
             <ul className="space-y-2 text-sm">
               {doc.sections.map((s, i) => (
                 <li key={s.title}>
-                  <a className="hover:text-rio" href={`#${anchor(i)}`}>
+                  <a className="hover:text-uva" href={`#${anchor(i)}`}>
                     {s.title}
                   </a>
                 </li>

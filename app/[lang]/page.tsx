@@ -1,13 +1,14 @@
 import { Handshake } from "lucide-react";
 import Link from "next/link";
 
-import AppExplorer from "@/components/app-explorer";
+import AppSections from "@/components/app-sections";
 import Benefits from "@/components/benefits";
 import Calculator from "@/components/calculator";
 import { CaseCard, PostCard } from "@/components/cards";
 import Cta from "@/components/cta";
 import Faq from "@/components/faq";
 import Hero from "@/components/hero";
+import ImageBand from "@/components/image-band";
 import Problem from "@/components/problem";
 import Ribbon from "@/components/ribbon";
 import Services from "@/components/services";
@@ -29,13 +30,14 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
       <Hero lang={lang} />
       <Trusted label={home.trusted} />
       <Problem {...home.problem} />
-      <AppExplorer lang={lang} />
+      <AppSections lang={lang} />
       <Ribbon words={home.ribbon} />
       <Benefits {...home.benefits} />
       <Stats items={home.stats} />
       <Section tone="base" deco="plus">
         <Calculator lang={lang} labels={home.calc} />
       </Section>
+      <ImageBand image="/images/band-rings.svg" accent="#f0609f" {...home.bands[0]} />
       <Testimonials {...home.testimonials} prev={common.prev} next={common.next} />
       <Services lang={lang} />
 
@@ -84,6 +86,7 @@ export default async function Home({ params }: { params: Promise<{ lang: string 
         </div>
       </Section>
 
+      <ImageBand image="/images/band-horizon.svg" accent="#ff6a2b" {...home.bands[1]} />
       <Faq title={home.faq.title} items={home.faq.items} tone="alta" deco="waves" />
       <Cta lang={lang} />
     </>

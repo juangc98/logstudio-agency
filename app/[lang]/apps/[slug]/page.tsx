@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import AppShowcase from "@/components/app-showcase";
 import Cta from "@/components/cta";
 import Faq from "@/components/faq";
 import AppMock from "@/components/mock";
@@ -34,34 +35,27 @@ export default async function AppPage({ params }: P) {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-arena">
-        <Deco name="pills" />
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 sm:px-6 md:grid-cols-2 md:gap-16 md:py-20">
-          <div data-aos="fade-up">
-            <Link className="mb-6 inline-block text-sm font-bold text-rio hover:underline" href={`/${lang}/apps`}>
-              ← {d.nav.allApps}
-            </Link>
-            <div className="mb-6">
-              <IconBox icon={meta.icon} tone={meta.tone} size="lg" />
-            </div>
-            <h1 className="font-display mb-4 text-4xl leading-tight font-bold md:text-5xl">{app.name}</h1>
-            <p className="mb-2 text-xl font-bold">{app.tagline}</p>
-            <p className="mb-8 text-lg text-tinta-suave">{app.desc}</p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              {/* TODO(marca): link to the Shopify App Store listing once the app is published */}
-              <Btn href={`/${lang}/contact`} variant="install" iconSrc="/svg/shopify-icon.svg">
-                {d.common.installApp}
-              </Btn>
-              <Btn href={`/${lang}/docs/${slug}`} variant="secondary">
-                {page.docsCta}
-              </Btn>
-            </div>
-          </div>
-          <div data-aos="fade-left">
-            <AppMock slug={slug} />
-          </div>
-        </div>
-      </section>
+      <AppShowcase
+        slug={slug}
+        name={app.name}
+        tagline={app.tagline}
+        desc={app.desc}
+        features={app.features}
+        headingTag="h1"
+        first
+        href={`/${lang}/contact`}
+        cta={d.common.installApp}
+        extra={
+          <Btn href={`/${lang}/docs/${slug}`} variant="primary">
+            {page.docsCta}
+          </Btn>
+        }
+        intro={
+          <Link className="muted mb-8 inline-block text-sm font-bold hover:text-papel" href={`/${lang}/apps`}>
+            ← {d.nav.allApps}
+          </Link>
+        }
+      />
 
       <Section tone="deep" deco="rings-left">
         <dl className="grid gap-8 text-center sm:grid-cols-3">
@@ -72,21 +66,6 @@ export default async function AppPage({ params }: P) {
             </div>
           ))}
         </dl>
-      </Section>
-
-      <Section>
-        <SectionHead title={page.featuresTitle} desc={page.featuresDesc} />
-        <ul className="grid gap-6 sm:grid-cols-2">
-          {app.features.map((f, i) => (
-            <li key={f.title} data-aos="fade-up" data-aos-delay={(i % 2) * 100} className="card-pop flex gap-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
-              <IconBox icon={meta.featureIcons[i]} tone={meta.tone} />
-              <div>
-                <h3 className="font-display mb-1 text-[22px] leading-7 font-bold">{f.title}</h3>
-                <p className="text-tinta-suave">{f.desc}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
       </Section>
 
       <Steps title={page.howTitle} steps={app.steps} />
@@ -111,7 +90,7 @@ export default async function AppPage({ params }: P) {
                   <span>
                     <span className="font-display block text-xl font-bold">{o.name}</span>
                     <span className="mb-2 block text-tinta-suave">{o.tagline}</span>
-                    <span className="flex items-center gap-2 text-sm font-bold text-rio">
+                    <span className="flex items-center gap-2 text-sm font-bold text-uva">
                       {d.common.learnMore}
                       <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
                     </span>

@@ -63,7 +63,7 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
 
         <p className="mt-8 text-center text-tinta-suave">
           {contact.direct}:{" "}
-          <a className="font-bold text-rio underline" href="mailto:contacto@logstudio.com.ar">
+          <a className="font-bold text-uva underline" href="mailto:contacto@logstudio.com.ar">
             contacto@logstudio.com.ar
           </a>
         </p>

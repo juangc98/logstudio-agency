@@ -2,7 +2,7 @@ import type { LucideIcon } from "lucide-react";
 
 import Deco, { type DecoName } from "./deco";
 
-// Surfaces are papel, arena or "deep" (rio blue). Color lives in accents (brasa buttons, sol badges, app icons).
+// Surfaces are papel, arena or "deep" (noche, the dark grid surface). Color lives in accents (brasa buttons, sol badges, app icons).
 // A deep section sits BEHIND its neighbours: the section before it gets rounded bottom corners (see .behind in
 // utility-patterns.css) and the section after it overlaps it with a rounded top, like layers of paper.
 type Tone = "base" | "alta" | "deep";
@@ -10,7 +10,7 @@ type Tone = "base" | "alta" | "deep";
 const tones: Record<Tone, string> = {
   base: "bg-papel text-tinta",
   alta: "bg-arena text-tinta",
-  deep: "behind on-dark z-0 bg-rio text-papel",
+  deep: "behind on-dark z-0 noche-grid text-papel",
 };
 
 export function Section({
@@ -32,6 +32,12 @@ export function Section({
       id={id}
       className={`relative -mt-10 scroll-mt-28 overflow-hidden ${deep ? "" : "rounded-t-[32px] md:rounded-t-[48px]"} ${tones[tone]}`}
     >
+      {deep && (
+        <>
+          <span aria-hidden="true" className="glow animate-float -top-24 -left-24 h-80 w-80 bg-rosa/30" />
+          <span aria-hidden="true" className="glow animate-float-slow -right-24 -bottom-24 h-96 w-96 bg-indigo/25" />
+        </>
+      )}
       {deco && <Deco name={deco} dark={deep} />}
       <div
         className={`relative mx-auto max-w-6xl px-4 sm:px-6 ${
@@ -68,15 +74,15 @@ export function SectionHead({
 
 const iconTones = {
   sol: "bg-sol text-tinta",
-  rio: "bg-rio-claro text-rio",
+  rosa: "bg-rosa text-tinta",
   brote: "bg-brote-claro text-tinta",
   brasa: "bg-brasa text-tinta",
-  uva: "bg-uva-claro text-tinta",
+  uva: "bg-indigo text-tinta",
 } as const;
 
 export function IconBox({
   icon: Icon,
-  tone = "rio",
+  tone = "uva",
   size = "md",
 }: {
   icon: LucideIcon;

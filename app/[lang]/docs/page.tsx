@@ -25,7 +25,7 @@ export default async function DocsIndex({ params }: { params: Promise<{ lang: st
                 <IconBox icon={appMeta[slug].icon} tone={appMeta[slug].tone} />
                 <h2 className="font-display text-[22px] leading-7 font-bold">{apps.items[slug].name}</h2>
                 <p className="grow text-tinta-suave">{docs.items[slug].intro}</p>
-                <span className="flex items-center gap-2 text-sm font-bold text-rio">
+                <span className="flex items-center gap-2 text-sm font-bold text-uva">
                   <BookOpen className="h-4 w-4" aria-hidden="true" />
                   {docs.openGuide}
                 </span>

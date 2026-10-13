@@ -130,6 +130,10 @@ const es: Dict = {
       desc: "Ofrecé las apps a tus clientes y generá ingresos recurrentes. Condiciones a confirmar.",
       cta: "Ver el programa de partners",
     },
+    bands: [
+      { eyebrow: "La regla con la que construimos", title: "Cada oferta tiene que seguir rindiendo.", desc: "Una promo que sube la facturación y baja la ganancia es un descuento más caro. Medimos lo que te queda." },
+      { eyebrow: "Dos programadores, un stack", title: "Código con criterio. Hecho para durar.", desc: "Nombres reales detrás de cada app y cada respuesta, desde Buenos Aires y Rosario." },
+    ],
     ribbon: ["Promos", "Bundles", "Tests", "Soporte con nombre", "Hecho para durar"],
     calc: {
       eyebrow: "Hacé la cuenta",

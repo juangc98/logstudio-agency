@@ -22,12 +22,15 @@
   --color-brasa: var(--brasa);
   --color-sol: var(--sol);
   --color-brote: var(--brote);
-  --color-rio: var(--rio);
+  --color-noche: var(--noche);
+  --color-noche-alta: var(--noche-alta);
+  --color-rosa: var(--rosa);
+  --color-menta: var(--menta);
+  --color-indigo: var(--indigo);
   --color-uva: var(--uva);
   --color-brasa-claro: var(--brasa-claro);
   --color-sol-claro: var(--sol-claro);
   --color-brote-claro: var(--brote-claro);
-  --color-rio-claro: var(--rio-claro);
   --color-uva-claro: var(--uva-claro);
   --color-castor: var(--castor);
   --color-castor-hondo: var(--castor-hondo);
@@ -47,6 +50,17 @@
   --radius-lg: 24px;
   --radius-xl: 24px;
   --radius-2xl: 24px;
+
+  --animate-float: float 9s ease-in-out infinite;
+  --animate-float-slow: float 14s ease-in-out infinite reverse;
+  --animate-sheen: sheen 7s linear infinite;
+  @keyframes float {
+    0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+    50% { transform: translate3d(3%, -6%, 0) scale(1.08); }
+  }
+  @keyframes sheen {
+    to { background-position: 200% center; }
+  }
 
   --animate-infinite-scroll: infinite-scroll 60s linear infinite;
   --animate-infinite-scroll-inverse: infinite-scroll-inverse 60s linear infinite;
@@ -70,6 +84,14 @@
 }
 
 @layer base {
+  :root {
+    --noche: #0b0d1a;
+    --noche-alta: #151932;
+    --rosa: #f0609f;
+    --menta: #3ecf8e;
+    --indigo: #8b8dfb;
+  }
+
   *,
   ::after,
   ::before,
@@ -85,7 +107,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--rio);
+    outline: 2px solid var(--brasa);
     outline-offset: 2px;
   }
 

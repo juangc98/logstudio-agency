@@ -181,7 +181,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-textarea,
 .form-multiselect,
 .form-select {
-  @apply bg-papel px-4 py-2 text-sm text-tinta focus:border-rio;
+  @apply bg-papel px-4 py-2 text-sm text-tinta focus:border-brasa;
 }
 
 .form-input,
@@ -211,7 +211,7 @@ input[type="search"]::-webkit-search-results-decoration {
   scrollbar-width: none;
 }
 
-/* Deep (rio) sections: section heads flip to light text; cards keep their own light surface and dark text. */
+/* Deep (noche) sections: section heads flip to light text; cards keep their own light surface and dark text. */
 .on-dark [data-head] .text-tinta-suave {
   color: var(--papel);
 }
@@ -237,4 +237,110 @@ main > section:has(+ section.behind) > div {
 }
 .card-pop {
   color: var(--tinta);
+}
+
+/* Night surface: faint grid + glow blobs, from the launch slides. Children go in a relative wrapper. */
+.noche-grid {
+  background-color: var(--noche);
+  background-image:
+    linear-gradient(rgb(255 255 255 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(255 255 255 / 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(90px);
+  pointer-events: none;
+  opacity: 0.55;
+}
+.on-night {
+  color: #f4f2fb;
+}
+.on-night .muted {
+  color: #a7a5c0;
+}
+.pill-night {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 16%, transparent);
+  color: var(--accent);
+}
+.chip-night {
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: rgb(255 255 255 / 0.06);
+  border: 1px solid rgb(255 255 255 / 0.08);
+  color: #e6e4f5;
+}
+/* Gradient text that slowly sheens across the accent colour. */
+.accent-text {
+  background-image: linear-gradient(100deg, var(--accent) 0%, var(--accent) 40%, color-mix(in srgb, var(--accent) 55%, #fff) 50%, var(--accent) 60%, var(--accent) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen 7s linear infinite;
+}
+/* Full-width photo band: bg image drifts slower than the page (CSS parallax). */
+.band {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+@media (max-width: 767px), (prefers-reduced-motion: reduce) {
+  .band {
+    background-attachment: scroll;
+  }
+}
+.spot {
+  position: relative;
+}
+.spot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgb(255 255 255 / 0.09), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.spot:hover::before {
+  opacity: 1;
+}
+
+/* Buttons on dark surfaces: tinta shadows vanish, so lift with a light edge. */
+.on-night .btn,
+.on-night .btn-sm,
+.on-dark .btn,
+.on-dark .btn-sm {
+  border-color: var(--tinta);
+  box-shadow: 0 4px 0 rgb(255 255 255 / 0.28);
+}
+.on-night .btn:hover,
+.on-night .btn-sm:hover,
+.on-dark .btn:hover,
+.on-dark .btn-sm:hover {
+  box-shadow: 0 3px 0 rgb(255 255 255 / 0.28);
+}
+.on-night .btn:active,
+.on-night .btn-sm:active,
+.on-dark .btn:active,
+.on-dark .btn-sm:active {
+  box-shadow: none;
+}
+
+@keyframes sheen {
+  to {
+    background-position: 200% center;
+  }
 }

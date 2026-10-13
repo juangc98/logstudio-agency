@@ -11,12 +11,12 @@ function Example({ caption, children }: { caption: string; children: React.React
   );
 }
 
-function Chip({ children, tone = "arena" }: { children: React.ReactNode; tone?: "arena" | "brote" | "sol" | "rio" | "brasa" }) {
+function Chip({ children, tone = "arena" }: { children: React.ReactNode; tone?: "arena" | "brote" | "sol" | "uva" | "brasa" }) {
   const t = {
     arena: "bg-arena",
     brote: "bg-brote-claro",
     sol: "bg-sol",
-    rio: "bg-rio-claro",
+    uva: "bg-uva-claro",
     brasa: "bg-brasa-claro",
   }[tone];
   return <span className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ${t}`}>{children}</span>;
@@ -169,7 +169,7 @@ function TestMock() {
       <Bar title="Test Log · Free tote vs control" />
       <div className="p-4">
         <div className="mb-3 flex flex-wrap items-center gap-2">
-          <Chip tone="rio">Offer test · 14 days</Chip>
+          <Chip tone="uva">Offer test · 14 days</Chip>
           <Chip>50 / 50 split</Chip>
           <Chip tone="sol">Running</Chip>
         </div>

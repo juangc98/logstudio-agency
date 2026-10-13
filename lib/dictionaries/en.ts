@@ -129,6 +129,10 @@ const en = {
       desc: "Offer the apps to your clients and earn recurring revenue. Terms to confirm.",
       cta: "See the partner program",
     },
+    bands: [
+      { eyebrow: "The rule we build by", title: "Every offer still has to earn.", desc: "A promotion that grows revenue and shrinks profit is just a more expensive discount. We measure what you keep." },
+      { eyebrow: "Two developers, one stack", title: "Code with judgment. Built to last.", desc: "Real names behind every app and every reply, from Buenos Aires and Rosario." },
+    ],
     ribbon: ["Promos", "Bundles", "Tests", "Support with a name", "Built to last"],
     calc: {
       eyebrow: "Do the math",

@@ -30,7 +30,7 @@ export default function HeaderNav({
               <li key={item.label} className="group relative">
                 <button
                   type="button"
-                  className="flex items-center gap-1 rounded-sm px-3 py-2 hover:text-rio"
+                  className="flex items-center gap-1 rounded-sm px-3 py-2 hover:text-uva"
                   aria-haspopup="true"
                 >
                   {item.label}
@@ -49,7 +49,7 @@ export default function HeaderNav({
               </li>
             ) : (
               <li key={item.label}>
-                <Link className="block rounded-sm px-3 py-2 hover:text-rio" href={item.href!}>
+                <Link className="block rounded-sm px-3 py-2 hover:text-uva" href={item.href!}>
                   {item.label}
                 </Link>
               </li>

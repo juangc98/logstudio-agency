@@ -27,7 +27,7 @@ export default function Apps({ lang }: { lang: string }) {
                     const Icon = meta.featureIcons[fi];
                     return (
                       <li key={f.title} className="flex items-center gap-3">
-                        <Icon className="h-5 w-5 shrink-0 text-rio" aria-hidden="true" />
+                        <Icon className="h-5 w-5 shrink-0 text-uva" aria-hidden="true" />
                         {f.title}
                       </li>
                     );

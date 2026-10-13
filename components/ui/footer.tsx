@@ -39,14 +39,15 @@ export default function Footer({ lang }: { lang: string }) {
     },
   ];
   return (
-    <footer className="relative -mt-10 rounded-t-[32px] border-t-2 border-tinta bg-papel md:rounded-t-[48px]">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <footer className="on-night noche-grid relative -mt-10 overflow-hidden rounded-t-[32px] border-t border-white/10 md:rounded-t-[48px]">
+      <span aria-hidden="true" className="glow animate-float -bottom-32 left-1/4 h-72 w-96 bg-rosa/20" />
+      <div className="relative mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <div className="grid gap-10 md:grid-cols-6">
           <div className="md:col-span-2">
             <Link href={`/${lang}`} className="mb-4 inline-block">
-              <Logo height={28} />
+              <Logo height={28} dark />
             </Link>
-            <p className="mb-4 max-w-xs text-sm text-tinta-suave">{footer.tagline}</p>
+            <p className="mb-4 max-w-xs text-sm text-[#a7a5c0]">{footer.tagline}</p>
             <p className="mb-4 inline-flex items-center gap-2 rounded-sm bg-sol px-3 py-2 text-xs font-semibold">
               <ShopifyMark className="h-4 w-4" />
               {common.partnerBadge}
@@ -74,7 +75,7 @@ export default function Footer({ lang }: { lang: string }) {
               <ul className="space-y-2 text-sm">
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link className="text-tinta-suave hover:text-tinta" href={l.href}>
+                    <Link className="text-[#a7a5c0] hover:text-papel" href={l.href}>
                       {l.label}
                     </Link>
                   </li>
@@ -83,7 +84,7 @@ export default function Footer({ lang }: { lang: string }) {
             </nav>
           ))}
         </div>
-        <p className="mt-12 border-t border-linea pt-6 font-mono text-xs text-tinta-suave">
+        <p className="mt-12 border-t border-white/10 pt-6 font-mono text-xs text-[#a7a5c0]">
           $ exit · session closed. &copy; {new Date().getFullYear()} log studio. {footer.rights}
         </p>
       </div>
