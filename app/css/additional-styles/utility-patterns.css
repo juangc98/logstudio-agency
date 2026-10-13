@@ -38,21 +38,21 @@
   text-transform: uppercase;
 }
 
-/* Buttons: three round corners, 4px tip on the top-right (logo point). */
+/* Buttons: three round corners, 4px tip on the top-right (logo point). Soft glow instead of a hard edge. */
 .btn,
 .btn-sm {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--tinta);
+  border: 1px solid transparent;
   font-family: var(--font-sans);
   font-weight: 600;
   letter-spacing: 0;
   white-space: nowrap;
-  box-shadow: var(--sombra-dura);
   transition:
-    transform 0.1s ease,
-    box-shadow 0.1s ease;
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .btn {
@@ -95,20 +95,22 @@
 
 .btn:hover,
 .btn-sm:hover {
-  transform: translateY(1px);
-  box-shadow: 0 3px 0 var(--tinta);
+  transform: translateY(-2px);
 }
 
 .btn:active,
 .btn-sm:active {
-  transform: translateY(4px);
-  box-shadow: none;
+  transform: translateY(0);
 }
 
 /* Two colors only: fill + tinta. Circle is always tinta. */
 .btn-primary {
   background: var(--brasa);
   color: var(--tinta);
+  box-shadow: 0 10px 28px -10px rgb(255 106 43 / 0.7);
+}
+.btn-primary:hover {
+  box-shadow: 0 14px 34px -10px rgb(255 106 43 / 0.9);
 }
 .btn-primary .btn-circulo {
   background: var(--tinta);
@@ -116,8 +118,10 @@
 }
 
 .btn-secondary {
-  background: var(--papel);
+  background: #fff;
   color: var(--tinta);
+  border-color: var(--linea);
+  box-shadow: 0 6px 18px -10px rgb(11 13 26 / 0.3);
 }
 .btn-secondary .btn-circulo {
   background: var(--tinta);
@@ -125,8 +129,9 @@
 }
 
 .btn-install {
-  background: var(--brote);
+  background: var(--menta, var(--brote));
   color: var(--tinta);
+  box-shadow: 0 10px 28px -10px rgb(62 207 142 / 0.6);
 }
 .btn-install .btn-circulo {
   background: var(--tinta);
@@ -145,7 +150,7 @@
 @media (hover: hover) and (pointer: fine) {
   .card-pop:hover {
     transform: translateY(-4px);
-    box-shadow: 6px 8px 0 var(--tinta);
+    box-shadow: 0 24px 50px -22px rgb(11 13 26 / 0.45);
   }
   .mock-pop:hover {
     transform: translateY(-8px) rotate(-0.5deg);
@@ -166,7 +171,7 @@ input[type="search"]::-webkit-search-results-decoration {
 .form-select,
 .form-checkbox,
 .form-radio {
-  @apply border-2 border-tinta focus:ring-0 focus:ring-offset-0;
+  @apply border border-linea focus:ring-0 focus:ring-offset-0;
 }
 
 .form-input,
@@ -318,25 +323,23 @@ main > section:has(+ section.behind) > div {
   opacity: 1;
 }
 
-/* Buttons on dark surfaces: tinta shadows vanish, so lift with a light edge. */
-.on-night .btn,
-.on-night .btn-sm,
-.on-dark .btn,
-.on-dark .btn-sm {
-  border-color: var(--tinta);
-  box-shadow: 0 4px 0 rgb(255 255 255 / 0.28);
-}
-.on-night .btn:hover,
-.on-night .btn-sm:hover,
-.on-dark .btn:hover,
-.on-dark .btn-sm:hover {
-  box-shadow: 0 3px 0 rgb(255 255 255 / 0.28);
-}
-.on-night .btn:active,
-.on-night .btn-sm:active,
-.on-dark .btn:active,
-.on-dark .btn-sm:active {
+/* Buttons on dark surfaces: glass secondary. */
+.on-night .btn-secondary,
+.on-dark .btn-secondary {
+  background: rgb(255 255 255 / 0.08);
+  color: #f4f2fb;
+  border-color: rgb(255 255 255 / 0.22);
   box-shadow: none;
+  backdrop-filter: blur(8px);
+}
+.on-night .btn-secondary:hover,
+.on-dark .btn-secondary:hover {
+  background: rgb(255 255 255 / 0.16);
+}
+.on-night .btn-secondary .btn-circulo,
+.on-dark .btn-secondary .btn-circulo {
+  background: #f4f2fb;
+  color: var(--noche);
 }
 
 @keyframes sheen {

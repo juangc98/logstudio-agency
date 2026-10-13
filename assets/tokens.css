@@ -1,11 +1,11 @@
 /* log studio · tokens de marca v2. Generado desde tokens.json: no editar a mano. */
 :root {
   color-scheme: light;
-  --papel: #fff9ee;
-  --arena: #f0dcb3;
-  --tinta: #1a1412;
-  --tinta-suave: #5c4a42;
-  --linea: #e8d6b4;
+  --papel: #f6f7fd;
+  --arena: #e9ebfa;
+  --tinta: #0b0d1a;
+  --tinta-suave: #4f5270;
+  --linea: #d9dcf0;
   --brasa: #ff6a2b;
   --sol: #ffc93c;
   --brote: #19b77a;
@@ -64,7 +64,7 @@
   --radius-boton-md: 24px 4px 24px 24px;
   --radius-boton-lg: 28px 4px 28px 28px;
 
-  --sombra-dura: 0 4px 0 var(--tinta);
-  --sombra-dura-l: 6px 6px 0 var(--tinta);
+  --sombra-dura: 0 12px 32px -14px rgb(11 13 26 / 0.3);
+  --sombra-dura-l: 0 30px 70px -28px rgb(11 13 26 / 0.45);
   --borde: 2px solid var(--tinta);
 }

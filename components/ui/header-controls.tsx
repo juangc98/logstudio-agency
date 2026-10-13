@@ -14,7 +14,7 @@ export default function HeaderControls({ lang, languageLabel }: { lang: string; 
       {locales.map((l) => (
         <li key={l}>
           <Link
-            className={`px-2 py-1 uppercase ${l === lang ? "text-tinta" : "text-tinta-suave hover:text-tinta"}`}
+            className={`px-2 py-1 uppercase ${l === lang ? "text-papel" : "text-[#a7a5c0] hover:text-papel"}`}
             href={`/${l}${rest ? `/${rest}` : ""}`}
             hrefLang={l}
             lang={l}

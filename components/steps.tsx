@@ -53,10 +53,10 @@ export default function Steps({
               data-in="false"
               className="relative translate-y-10 pl-16 opacity-0 transition duration-700 ease-out data-[in=true]:translate-y-0 data-[in=true]:opacity-100 motion-reduce:translate-y-0 motion-reduce:opacity-100"
             >
-              <span className="font-display absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-full border-2 border-tinta bg-brasa text-lg font-extrabold">
+              <span className="font-display absolute top-0 left-0 flex h-10 w-10 items-center justify-center rounded-full border border-linea bg-brasa text-lg font-extrabold">
                 {i + 1}
               </span>
-              <div className="card-pop rounded-md border-2 border-tinta bg-papel p-6 shadow-hard">
+              <div className="card-pop rounded-md border border-linea bg-white p-6 shadow-hard">
                 <h3 className="font-display mb-2 text-[22px] leading-7 font-bold">{s.title}</h3>
                 <p className="text-tinta-suave">{s.desc}</p>
               </div>

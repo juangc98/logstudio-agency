@@ -3,7 +3,7 @@ import type { AppSlug } from "@/lib/content";
 function Example({ caption, children }: { caption: string; children: React.ReactNode }) {
   return (
     <figure className="text-left">
-      <div className="mock-pop overflow-hidden border-2 border-tinta bg-papel text-tinta shadow-hard-l" style={{ borderRadius: "var(--radius-lg)" }}>
+      <div className="mock-pop overflow-hidden border border-linea bg-white text-tinta shadow-hard-l" style={{ borderRadius: "var(--radius-lg)" }}>
         {children}
       </div>
       <figcaption className="mt-3 text-sm text-tinta-suave">{caption}</figcaption>
@@ -24,7 +24,7 @@ function Chip({ children, tone = "arena" }: { children: React.ReactNode; tone?: 
 
 function Bar({ title }: { title: string }) {
   return (
-    <div className="flex items-center justify-between border-b-2 border-tinta bg-arena px-4 py-2.5">
+    <div className="flex items-center justify-between border-b border-linea bg-arena px-4 py-2.5">
       <p className="etiqueta truncate text-tinta">{title}</p>
       <span className="etiqueta text-tinta-suave">Example</span>
     </div>
@@ -33,7 +33,7 @@ function Bar({ title }: { title: string }) {
 
 function Cart({ gift }: { gift: boolean }) {
   return (
-    <div className="border-t-2 border-tinta bg-papel p-4">
+    <div className="border-t border-linea bg-papel p-4">
       <p className="mb-3 text-sm font-semibold">
         {gift ? (
           <>
@@ -76,7 +76,7 @@ function PromoMock() {
     <Example caption="Example: the Promo Log editor, with the storefront cart updating as you build.">
       <Bar title="Acme Store · Promo Log · Spend $75, get a tote" />
       <div className="grid md:grid-cols-2">
-        <div className="space-y-3 border-b-2 border-tinta p-4 md:border-r-2 md:border-b-0">
+        <div className="space-y-3 border-b border-linea p-4 md:border-r-2 md:border-b-0">
           <ol className="etiqueta mb-1 flex gap-3 text-tinta-suave">
             <li className="text-tinta">1 Trigger</li>
             <li>2 Gift</li>
@@ -112,7 +112,7 @@ function OffersMock() {
     <Example caption="Example: the offers list with each offer's status, beside the cart shoppers see.">
       <Bar title="Acme Store · Promo Log · Offers" />
       <div className="grid md:grid-cols-2">
-        <ul className="space-y-2 border-b-2 border-tinta p-4 md:border-r-2 md:border-b-0">
+        <ul className="space-y-2 border-b border-linea p-4 md:border-r-2 md:border-b-0">
           {rows.map(([name, meta, status, tone]) => (
             <li key={name} className="flex items-center justify-between gap-2 rounded-sm bg-arena px-3 py-2">
               <div>
@@ -134,7 +134,7 @@ function BundleMock() {
     <Example caption="Example: a mix-and-match bundle in the cart, priced as a set.">
       <Bar title="Acme Store · Bundle Log · Serum + cream" />
       <div className="grid md:grid-cols-2">
-        <div className="grid grid-cols-3 gap-2 border-b-2 border-tinta p-4 md:border-r-2 md:border-b-0">
+        <div className="grid grid-cols-3 gap-2 border-b border-linea p-4 md:border-r-2 md:border-b-0">
           {[1, 2, 3, 4, 5, 6].map((n) => (
             <div key={n} className={`rounded-sm border-2 p-2 ${n < 3 ? "border-brote bg-brote-claro" : "border-linea bg-arena"}`}>
               <div className="mb-2 aspect-square rounded-sm bg-linea" />

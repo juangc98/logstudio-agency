@@ -2,16 +2,16 @@ import { Calendar, LayoutGrid } from "lucide-react";
 import Link from "next/link";
 
 import Btn from "@/components/ui/btn";
-import { ShopifyMark } from "@/components/ui/marks";
 import { appSlugs } from "@/lib/content";
 import { getDict } from "@/lib/i18n";
 
 import HeaderControls from "./header-controls";
+import HeaderShell from "./header-shell";
 import HeaderNav, { type NavItem } from "./header-nav";
 import Logo from "./logo";
 
 export default function Header({ lang }: { lang: string }) {
-  const { nav, doors, apps, common } = getDict(lang);
+  const { nav, doors, apps } = getDict(lang);
   const items: NavItem[] = [
     {
       label: nav.apps,
@@ -37,16 +37,10 @@ export default function Header({ lang }: { lang: string }) {
     { label: nav.about, href: `/${lang}/about` },
   ];
   return (
-    <header className="sticky top-0 z-30 border-b-2 border-tinta bg-papel">
-      <div className="bg-sol text-xs font-semibold text-tinta">
-        <p className="mx-auto flex h-8 max-w-6xl items-center justify-center gap-2 px-4">
-          <ShopifyMark className="h-4 w-4" />
-          {common.partnerBadge}
-        </p>
-      </div>
+    <HeaderShell>
       <div className="relative mx-auto flex h-16 max-w-6xl items-center justify-between gap-4 px-4 sm:px-6">
         <Link href={`/${lang}`} className="shrink-0">
-          <Logo height={28} />
+          <Logo height={28} dark />
         </Link>
 
         <div className="flex items-center gap-3">
@@ -60,6 +54,6 @@ export default function Header({ lang }: { lang: string }) {
           </Btn>
         </div>
       </div>
-    </header>
+    </HeaderShell>
   );
 }

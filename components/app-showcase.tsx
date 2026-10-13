@@ -48,7 +48,7 @@ export default function AppShowcase({
     >
       <span aria-hidden="true" className={`glow animate-float top-10 h-96 w-96 bg-[var(--accent)]/30 ${flip ? "-right-32" : "-left-32"}`} />
       <span aria-hidden="true" className={`glow animate-float-slow bottom-0 h-80 w-80 bg-indigo/20 ${flip ? "-left-24" : "-right-24"}`} />
-      <div className="relative mx-auto max-w-6xl px-4 pt-16 pb-[calc(5rem+40px)] sm:px-6 md:pt-28 md:pb-[calc(7rem+40px)]">
+      <div className={`relative mx-auto max-w-6xl px-4 ${first ? "pt-28 md:pt-40" : "pt-20 md:pt-28"} pb-[calc(5rem+40px)] sm:px-6 md:pb-[calc(7rem+40px)]`}>
         {intro}
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <div className={flip ? "md:order-2" : ""} data-aos="fade-up">

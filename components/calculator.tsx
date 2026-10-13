@@ -35,7 +35,7 @@ export default function Calculator({ labels, lang }: { labels: Labels; lang: str
         <h2 className="font-display mb-4 text-3xl leading-tight font-bold md:text-[40px] md:leading-[44px]">{labels.title}</h2>
         <p className="text-lg leading-[26px] text-tinta-suave">{labels.desc}</p>
       </div>
-      <div className="rounded-lg border-2 border-tinta bg-papel p-6 text-tinta shadow-hard-l md:p-8">
+      <div className="rounded-lg border border-linea bg-white p-6 text-tinta shadow-hard-l md:p-8">
         <div className="space-y-6">
           {rows.map((r) => (
             <div key={r.id}>
@@ -53,7 +53,7 @@ export default function Calculator({ labels, lang }: { labels: Labels; lang: str
                 step={r.step}
                 value={r.value}
                 onChange={(e) => r.set(Number(e.target.value))}
-                className="h-2 w-full cursor-pointer appearance-none rounded-full border-2 border-tinta bg-arena accent-brasa"
+                className="h-2 w-full cursor-pointer appearance-none rounded-full border border-linea bg-arena accent-brasa"
               />
             </div>
           ))}

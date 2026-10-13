@@ -11,7 +11,7 @@ export function CaseCard({ lang, slug, index }: { lang: string; slug: CaseSlug; 
   const { cases, common } = getDict(lang);
   const c = cases.items[slug];
   return (
-    <Link href={`/${lang}/case-studies/${slug}`} className="card-pop group flex h-full flex-col overflow-hidden rounded-md border-2 border-tinta bg-papel shadow-hard">
+    <Link href={`/${lang}/case-studies/${slug}`} className="card-pop group flex h-full flex-col overflow-hidden rounded-md border border-linea bg-white shadow-hard">
       <div className="overflow-hidden">
         <div className={`flex h-40 items-end p-4 transition duration-500 group-hover:scale-105 ${covers[index % covers.length]}`}>
           <span className="font-display text-2xl font-bold">{c.client}</span>
@@ -34,7 +34,7 @@ export function PostCard({ lang, slug, index }: { lang: string; slug: PostSlug; 
   const { blog, common } = getDict(lang);
   const p = blog.items[slug];
   return (
-    <Link href={`/${lang}/blog/${slug}`} className="card-pop group flex h-full flex-col overflow-hidden rounded-md border-2 border-tinta bg-papel shadow-hard">
+    <Link href={`/${lang}/blog/${slug}`} className="card-pop group flex h-full flex-col overflow-hidden rounded-md border border-linea bg-white shadow-hard">
       <div className="overflow-hidden">
         <div className={`h-32 transition duration-500 group-hover:scale-105 ${covers[(index + 1) % covers.length]}`} aria-hidden="true" />
       </div>

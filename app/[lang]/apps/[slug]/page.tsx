@@ -85,7 +85,7 @@ export default async function AppPage({ params }: P) {
             const o = d.apps.items[s];
             return (
               <li key={s}>
-                <Link href={`/${lang}/apps/${s}`} className="group flex h-full items-start gap-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-6 hover:border-tinta">
+                <Link href={`/${lang}/apps/${s}`} className="group flex h-full items-start gap-4 rounded-md border border-linea bg-white shadow-hard p-6 hover:border-tinta">
                   <IconBox icon={appMeta[s].icon} tone={appMeta[s].tone} />
                   <span>
                     <span className="font-display block text-xl font-bold">{o.name}</span>

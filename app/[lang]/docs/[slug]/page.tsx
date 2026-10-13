@@ -23,6 +23,8 @@ export default async function DocPage({ params }: P) {
   const d = getDict(lang);
   const doc = d.docs.items[slug];
   return (
+    <>
+    <div aria-hidden="true" className="noche-grid h-28" />
     <Section border={false}>
       <div className="grid gap-10 md:grid-cols-[14rem_1fr]">
         <aside>
@@ -54,5 +56,6 @@ export default async function DocPage({ params }: P) {
         </article>
       </div>
     </Section>
+    </>
   );
 }

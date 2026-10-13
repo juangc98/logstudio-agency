@@ -34,7 +34,7 @@ export default async function About({ params }: { params: Promise<{ lang: string
         <SectionHead title={about.valuesTitle} />
         <ul className="grid gap-6 md:grid-cols-3">
           {about.values.map((v, i) => (
-            <li key={v.title} data-aos="fade-up" data-aos-delay={i * 100} className="card-pop rounded-md border-2 border-tinta bg-papel shadow-hard p-6">
+            <li key={v.title} data-aos="fade-up" data-aos-delay={i * 100} className="card-pop rounded-md border border-linea bg-white shadow-hard p-6">
               <IconBox icon={valueIcons[i]} tone="sol" />
               <h3 className="font-display mt-4 mb-2 text-[22px] leading-7 font-bold">{v.title}</h3>
               <p className="text-tinta-suave">{v.desc}</p>

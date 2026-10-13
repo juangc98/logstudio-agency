@@ -34,7 +34,7 @@ export default function Tabs({ items, label }: { items: TabItem[]; label: string
             tabIndex={active === i ? 0 : -1}
             onClick={() => setActive(i)}
             onKeyDown={(e) => onKey(e, i)}
-            className={`flex items-center gap-2 rounded-md border-2 border-tinta px-4 py-2 font-semibold transition ${
+            className={`flex items-center gap-2 rounded-md border border-linea px-4 py-2 font-semibold transition ${
               active === i ? "bg-brasa text-tinta shadow-hard" : "bg-papel text-tinta hover:bg-arena"
             }`}
           >

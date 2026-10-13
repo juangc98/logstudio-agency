@@ -1,3 +1,4 @@
+import PageHero from "@/components/page-hero";
 import { getDict } from "@/lib/i18n";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
@@ -10,16 +11,13 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
   const { contact } = getDict(lang);
   const label = "mb-2 block text-sm font-bold";
   return (
-    <section>
+    <>
+      <PageHero title={contact.title} desc={contact.desc} />
+      <section className="relative -mt-10 rounded-t-[32px] bg-papel md:rounded-t-[48px]">
       <div className="px-4 py-12 sm:px-6 md:py-20">
-        <div className="mx-auto max-w-3xl pb-12 text-center">
-          <h1 className="font-display mb-4 text-4xl font-bold md:text-5xl">{contact.title}</h1>
-          <p className="text-lg text-tinta-suave">{contact.desc}</p>
-        </div>
-
         {/* TODO(marca): mailto until a real form backend exists */}
         <form
-          className="mx-auto max-w-md space-y-4 rounded-md border-2 border-tinta bg-papel shadow-hard p-6"
+          className="mx-auto max-w-md space-y-4 rounded-md border border-linea bg-white shadow-hard p-6"
           action="mailto:contacto@logstudio.com.ar"
           method="post"
           encType="text/plain"
@@ -69,5 +67,6 @@ export default async function Contact({ params }: { params: Promise<{ lang: stri
         </p>
       </div>
     </section>
+    </>
   );
 }

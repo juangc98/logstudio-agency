@@ -14,7 +14,7 @@ export default function Hero({ lang }: { lang: string }) {
     <section style={{ "--accent": "#ff6a2b" } as React.CSSProperties} className="on-night noche-grid relative overflow-hidden">
       <span aria-hidden="true" className="glow animate-float -top-20 left-[8%] h-[28rem] w-[28rem] bg-rosa/25" />
       <span aria-hidden="true" className="glow animate-float-slow right-[-6%] bottom-[-10%] h-[32rem] w-[32rem] bg-indigo/25" />
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-14 pb-[calc(4rem+40px)] sm:px-6 md:grid-cols-2 md:gap-14 md:pt-24 md:pb-[calc(7rem+40px)]">
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pt-28 pb-[calc(4rem+40px)] sm:px-6 md:grid-cols-2 md:gap-14 md:pt-40 md:pb-[calc(7rem+40px)]">
         <div>
           <span className="pill-night" data-aos="fade-up">
             <ShopifyMark className="h-3.5 w-3.5" />

@@ -60,7 +60,7 @@ export default function Footer({ lang }: { lang: string }) {
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="card-pop flex h-10 w-10 items-center justify-center rounded-sm border-2 border-tinta bg-papel shadow-hard"
+                    className="card-pop flex h-10 w-10 items-center justify-center rounded-sm border border-linea bg-white shadow-hard"
                     aria-label={link.id === "instagram" ? "Instagram" : "LinkedIn"}
                   >
                     {link.id === "instagram" ? <InstagramMark className="h-5 w-5" /> : <LinkedinMark className="h-5 w-5" />}
